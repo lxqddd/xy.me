@@ -1,21 +1,17 @@
 <script setup lang="ts">
-import Plum from './components/Plum.vue'
+  import Plum from './components/Plum.vue'
+  import Test from './components/Test.md'
+  import { useDark } from '@vueuse/core'
+
+  const isDark = useDark()
+
+  const toggleTheme = () => {
+    isDark.value = !isDark.value
+  }
 </script>
 
 <template>
   <Plum />
+  <Test />
+  <button @click="toggleTheme">切换主题</button>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
