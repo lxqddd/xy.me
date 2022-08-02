@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "monospace";
+  src: url("./fonts/Monospace.ttf");
+}
+
 .prose pre:not(.shiki) {
   padding: 0;
   margin: 0;
@@ -5,7 +10,7 @@
 }
 
 .prose .shiki {
-  font-family: 'DM Mono', 'Input Mono', 'Fira Code', monospace;
+  font-family: "DM Mono", "Input Mono", "Fira Code", "monospace";
   font-size: 1.05em;
   line-height: 1.4;
   margin: 0.5em 0;
@@ -148,7 +153,7 @@ h6:focus .header-anchor {
   overflow-x: hidden;
   text-overflow: ellipsis;
   opacity: 0;
-  transition: all .4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 .table-of-contents:hover {
