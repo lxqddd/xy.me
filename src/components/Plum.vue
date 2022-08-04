@@ -1,6 +1,6 @@
 <script setup='props' lang='ts'>
 import type { Fn } from '@vueuse/core'
-import {ref, reactive, onMounted, computed} from 'vue'
+import { ref, reactive, onMounted, computed } from 'vue'
 import { useWindowSize, useRafFn } from '@vueuse/core'
 
 const r180 = Math.PI
@@ -18,7 +18,7 @@ const init = ref(4)
 const len = ref(6)
 const stopped = ref(false)
 
-function initCanvas(canvas: HTMLCanvasElement, width = 400, height = 400, _dpi?: number) {
+function initCanvas (canvas: HTMLCanvasElement, width = 400, height = 400, _dpi?: number) {
   const ctx = canvas.getContext('2d')!
 
   const dpr = window.devicePixelRatio || 1
@@ -36,7 +36,7 @@ function initCanvas(canvas: HTMLCanvasElement, width = 400, height = 400, _dpi?:
   return { ctx, dpi }
 }
 
-function polar2cart(x = 0, y = 0, r = 0, theta = 0) {
+function polar2cart (x = 0, y = 0, r = 0, theta = 0) {
   const dx = r * Math.cos(theta)
   const dy = r * Math.sin(theta)
   return [x + dx, y + dy]
@@ -65,13 +65,10 @@ onMounted(async () => {
     const rad1 = rad + random() * r15
     const rad2 = rad - random() * r15
 
-    if (nx < -100 || nx > size.width + 100 || ny < -100 || ny > size.height + 100)
-      return
+    if (nx < -100 || nx > size.width + 100 || ny < -100 || ny > size.height + 100) { return }
 
-    if (iterations <= init.value || random() > 0.5)
-      steps.push(() => step(nx, ny, rad1))
-    if (iterations <= init.value || random() > 0.5)
-      steps.push(() => step(nx, ny, rad2))
+    if (iterations <= init.value || random() > 0.5) { steps.push(() => step(nx, ny, rad1)) }
+    if (iterations <= init.value || random() > 0.5) { steps.push(() => step(nx, ny, rad2)) }
   }
 
   let lastTime = performance.now()
@@ -80,8 +77,7 @@ onMounted(async () => {
   let controls: ReturnType<typeof useRafFn>
 
   const frame = () => {
-    if (performance.now() - lastTime < interval)
-      return
+    if (performance.now() - lastTime < interval) { return }
 
     iterations += 1
     prevSteps = steps
@@ -108,10 +104,9 @@ onMounted(async () => {
       () => step(random() * size.width, 0, r90),
       () => step(random() * size.width, size.height, -r90),
       () => step(0, random() * size.height, 0),
-      () => step(size.width, random() * size.height, r180),
+      () => step(size.width, random() * size.height, r180)
     ]
-    if (size.width < 500)
-      steps = steps.slice(0, 2)
+    if (size.width < 500) { steps = steps.slice(0, 2) }
     controls.resume()
     stopped.value = false
   }
@@ -126,7 +121,11 @@ const mask = computed(() => 'radial-gradient(circle, transparent, black);')
     class="plum"
     :style="`mask-image: ${mask};--webkit-mask-image: ${mask};`"
   >
-    <canvas ref="el" width="400" height="400" />
+    <canvas
+      ref="el"
+      width="400"
+      height="400"
+    />
   </div>
 </template>
 

@@ -8,30 +8,29 @@ import LinkAttributes from 'markdown-it-link-attributes'
 export default defineConfig({
   plugins: [
     Vue({
-      include: [/\.vue$/, /\.md$/],
+      include: [/\.vue$/, /\.md$/]
     }),
     Markdown({
       wrapperComponent: 'post',
       headEnabled: true,
       markdownItOptions: {
-        quotes: '""\'\'',
+        quotes: '""\'\''
       },
-      markdownItSetup(md) {
+      markdownItSetup (md) {
         md.use(Shiki, {
           theme: {
             light: 'vitesse-light',
-            dark: 'vitesse-dark',
-          },
+            dark: 'vitesse-dark'
+          }
         })
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
             target: '_blank',
-            rel: 'noopener',
-          },
+            rel: 'noopener'
+          }
         })
       }
     })
   ]
 })
-
