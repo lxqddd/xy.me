@@ -2,14 +2,9 @@ import { createSSRApp } from 'vue'
 import { renderToString } from '@vue/server-renderer'
 
 import { createRouter } from './router'
+import pinia from './store/index'
 
 import App from './App.vue'
-
-import Harlem from '@harlem/core'
-import { createServerSSRPlugin, getBridgingScriptBlock } from '@harlem/plugin-ssr'
-
-import registerGlobalComponents from './plugins/global-components'
-import { initStore } from './store/init'
 
 import type { ParameterizedContext } from 'koa'
 
@@ -21,19 +16,15 @@ export async function render (
   const router = createRouter('server')
 
   // create and initialize store
-  app.use(Harlem, { plugins: [createServerSSRPlugin()] })
-  initStore(ctx)
-
-  registerGlobalComponents(app)
 
   app.use(router)
+  app.use(pinia)
 
   await router.push(ctx.path)
   await router.isReady()
 
   const renderCtx: {modules?: string[]} = {}
   let renderedHtml = await renderToString(app, renderCtx)
-  renderedHtml += getBridgingScriptBlock()
 
   const preloadLinks = renderPreloadLinks(renderCtx.modules, manifest)
   return [renderedHtml, preloadLinks]

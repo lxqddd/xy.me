@@ -14,7 +14,9 @@
     "koa": "^2.13.4",
     "koa-connect": "^2.1.0",
     "markdown-it-link-attributes": "^4.0.0",
-    "vue": "^3.2.37"
+    "pinia": "^2.0.17",
+    "vue": "^3.2.37",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@types/koa": "^2.13.5",
