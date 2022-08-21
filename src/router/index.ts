@@ -13,9 +13,9 @@ export const route: Router = createRouter({
       component: () => import('../pages/Home.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../pages/About.md')
+      path: '/blog',
+      name: 'blog',
+      component: () => import('../pages/Blog.vue')
     }
   ]
 })
