@@ -16,4 +16,5 @@ const toggleTheme = () => {
   <button @click="toggleTheme">
     切换主题
   </button>
+  <router-view />
 </template>

@@ -1,6 +1,10 @@
-import { createRouter as createVueRouter, createMemoryHistory, createWebHistory, Router } from 'vue-router'
+import { createRouter, createWebHistory, Router } from 'vue-router'
 
-export const createRouter = (type: 'client' | 'server'): Router => createVueRouter({
-  history: type === 'client' ? createWebHistory() : createMemoryHistory(),
-  routes: []
+export const route: Router = createRouter({
+  history: createWebHistory(),
+  routes: [{
+    path: '/home',
+    name: 'home',
+    component: () => import('../pages/Home.vue')
+  }]
 })
