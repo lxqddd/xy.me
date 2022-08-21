@@ -19,6 +19,7 @@ module.exports = {
   ],
   rules: {
     'vue/multi-word-component-names': [0, 'never'],
-    'prefer-const': [0, 'never']
+    'prefer-const': [0, 'never'],
+    'vue/comment-directive': [0, 'never']
   }
 }
