@@ -28,7 +28,12 @@
 import Header from './layouts/Header.vue'
 import Plum from './components/Plum.vue'
 import { isDark } from './hooks/useTheme'
-import { goHome } from './hooks/useRouter'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const goHome = () => {
+  router.push('/')
+}
 
 </script>
 
@@ -40,7 +45,7 @@ import { goHome } from './hooks/useRouter'
   cursor: pointer;
 }
 .main {
-  width: 80%;
+  width: 75%;
   min-width: 500px;
   margin: 0 auto;
 }

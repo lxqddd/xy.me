@@ -1,13 +1,16 @@
 <template>
   <div class="header">
     <div
-      class="blog item"
+      class="about item"
       @click="goHome"
     >
-      Blog
+      主页
     </div>
-    <div class="about item">
-      About
+    <div
+      class="blog item"
+      @click="goBlog"
+    >
+      博客
     </div>
     <div
       class="github item"
@@ -88,12 +91,20 @@
 </template>
 <script lang="ts" setup>
 import { isDark, toggleTheme } from '../hooks/useTheme'
-import { goHome } from '../hooks/useRouter'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const goHome = () => {
+  router.push('/')
+}
+const goBlog = () => {
+  router.push('/blog')
+}
 
 </script>
 <style lang="scss" scoped>
 .header {
-  padding: 32px;
+  padding: 32px 0px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
