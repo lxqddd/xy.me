@@ -48,5 +48,6 @@ const goHome = () => {
   width: 75%;
   min-width: 500px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 </style>
