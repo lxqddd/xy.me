@@ -1,10 +1,16 @@
 <template>
   <div class="home-page">
     <div class="self">
-      <img src="../assets/imgs/self.jpeg">
-      <div class="desc">
-        乾坤已定，你我皆是牛马！
+      <!-- <img src="../assets/imgs/self.jpeg"> -->
+      <div class="self-desc">
+        <div class="name">
+          向阳
+        </div>
+        <div>一个略懂一点前端的前端er</div>
       </div>
+      <!-- <div class="desc">
+        乾坤已定，你我皆是牛马！
+      </div> -->
     </div>
     <div class="show">
       <div class="title">
@@ -35,9 +41,13 @@
           :key="item.name"
           class="item"
         >
-          <div class="name">
+          <a
+            class="name"
+            :href="item.link"
+            target="_blank"
+          >
             {{ item.name }}
-          </div>
+          </a>
           <div class="desc">
             {{ item.desc }}
           </div>
@@ -85,6 +95,15 @@ const gameList = ref<{
   .self {
     overflow: hidden;
     text-align: center;
+    .self-desc {
+      padding-top: 100px;
+      padding-bottom: 50px;
+      font-size: 30px;
+      .name {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+    }
     img {
       width: 260px;
       height: 260px;
