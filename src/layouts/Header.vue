@@ -112,8 +112,12 @@ const goBlog = () => {
   .item {
     padding-right: 20px;
     cursor: pointer;
+    opacity: 0.6;
     &:last-child {
       padding-right: 0px;
+    }
+    &:hover {
+      opacity: 1;
     }
   }
 }

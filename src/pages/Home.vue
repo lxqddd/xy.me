@@ -92,6 +92,9 @@ const gameList = ref<{
 
 <style lang="scss" scoped>
 .home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .self {
     overflow: hidden;
     text-align: center;
@@ -115,6 +118,7 @@ const gameList = ref<{
     }
   }
   .show {
+    max-width: 800px;
     .title {
       font-size: 30px;
       border-bottom: 1px solid rgba(#aaa, 0.5);
