@@ -1,0 +1,30 @@
+# 解题思路
+
+1. 定义一个指针，通过 while 循环，遍历数组
+2. 判断指针指向的当前值和目标值是否相等，如果相等，则移除当前项
+3. 如果不相等，向右移动指针
+
+## 完整代码如下
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function (nums, val) {
+  let i = 0
+  while (i < nums.length) {
+    if (nums[i] === val) {
+      nums.splice(i, 1)
+    } else {
+      i++
+    }
+  }
+}
+
+const nums = [0, 1, 2, 2, 3, 0, 4, 2]
+const val = 2
+removeElement(nums, val)
+console.log(nums)
+```
