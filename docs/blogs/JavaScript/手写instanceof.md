@@ -20,11 +20,11 @@ MDN 上边给的解释是：
 
 ```javascript
 function Person(name, age) {
-  this.name = name;
-  this.age = age;
+  this.name = name
+  this.age = age
 }
-const person = new Person("向阳", 18);
-console.log(person instanceof Person); // true
+const person = new Person('向阳', 18)
+console.log(person instanceof Person) // true
 ```
 
 创建一个构造函数 `Person`， 然后创建一个 `Person` 的实例对象 `person`，此时 `person.__proto__ === Person.prototype`，所以打印的时候打印出来的是 `true`。
@@ -33,12 +33,12 @@ console.log(person instanceof Person); // true
 
 ```javascript
 function Person(name, age) {
-  this.name = name;
-  this.age = age;
+  this.name = name
+  this.age = age
 }
-const obj = {};
-obj.__proto__ = Person.prototype;
-console.log(obj instanceof Person); // true
+const obj = {}
+obj.__proto__ = Person.prototype
+console.log(obj instanceof Person) // true
 ```
 
 创建一个空对象 `obj`，将 `obj` 的 `__proto__` 设置为构造函数 `Person` 的原型对象。
@@ -56,11 +56,11 @@ console.log(obj instanceof Person); // true
 
 ```javascript
 function Person(name, age) {
-  this.name = name;
-  this.age = age;
+  this.name = name
+  this.age = age
 }
-const person = new Person("向阳", 18);
-const obj = {};
+const person = new Person('向阳', 18)
+const obj = {}
 // obj.__proto__ = Person.prototype
 
 /**
@@ -70,28 +70,28 @@ const obj = {};
  */
 function myInstanceof(src, target) {
   if (!src || !target) {
-    console.warn("参数都没传对就来了");
-    return;
+    console.warn('参数都没传对就来了')
+    return
   }
-  if (typeof target !== "function") {
-    throw Error("target 不是一个构造函数！");
+  if (typeof target !== 'function') {
+    throw Error('target 不是一个构造函数！')
   }
-  let proto = Object.getPrototypeOf(src);
+  let proto = Object.getPrototypeOf(src)
   // 也可以用 proto = src.__proto__
-  const targetProto = target.prototype;
+  const targetProto = target.prototype
 
   while (true) {
-    if (!proto) return false;
-    if (proto === targetProto) return true;
-    proto = Object.getPrototypeOf(proto);
+    if (!proto) return false
+    if (proto === targetProto) return true
+    proto = Object.getPrototypeOf(proto)
     // 也可以用 proto = proto.__proto__
   }
 }
-console.log(myInstanceof(person, Person)); // true
-console.log(myInstanceof(obj, Person)); // false
+console.log(myInstanceof(person, Person)) // true
+console.log(myInstanceof(obj, Person)) // false
 
-obj.__proto__ = Person.prototype;
-console.log(myInstanceof(obj, Person)); // true
+obj.__proto__ = Person.prototype
+console.log(myInstanceof(obj, Person)) // true
 ```
 
 创建一个函数 `myInstanceof`，需要传入两个参数，第一个 `src` 是实例对象，第二个 `target` 是构造函数。
@@ -116,3 +116,5 @@ console.log(myInstanceof(obj, Person)); // true
 ![](https://files.mdnice.com/user/17954/3464ccf7-2e2b-4506-970f-326a88a8c245.png)
 如果你觉得写的不错的话，欢迎三连~
 ![](https://img.soogif.com/5HkHKKxGJ6ZmhQ7c8nLYOE9jfEXDpqp4.gif?scope=mdnice)
+
+<Plum />

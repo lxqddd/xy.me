@@ -43,16 +43,16 @@ emmmm, 其实今天的主要目的是手动实现一个 Map,所以话还是不�
 ```javascript
 class MyMap {
   constructor(items) {
-    this.items = items;
-    this.allKeys = [];
-    this.allValues = [];
-    this.items && this.init();
+    this.items = items
+    this.allKeys = []
+    this.allValues = []
+    this.items && this.init()
   }
   init() {
     this.items.forEach((item) => {
-      this.allKeys.push(item[0]);
-      this.allValues.push(item[1]);
-    });
+      this.allKeys.push(item[0])
+      this.allValues.push(item[1])
+    })
   }
 }
 ```
@@ -215,3 +215,5 @@ entries() {
 ### 参考文献
 
 1. https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+<Plum />

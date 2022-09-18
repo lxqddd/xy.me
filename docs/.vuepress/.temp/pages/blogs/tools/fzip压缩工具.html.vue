@@ -117,6 +117,6 @@ fzip <span class="token parameter variable">-f</span> ./src/cli.ts <span class="
 <p>![](https://files.mdnice.com/user/17954/3464ccf7-2e2b-4506-970f-326a88a8c245.png =60%x)
 如果你觉得写的不错的话，欢迎三连~
 <img src="https://img.soogif.com/5HkHKKxGJ6ZmhQ7c8nLYOE9jfEXDpqp4.gif?scope=mdnice" alt=""></p>
-</div></template>
+<Plum /></div></template>
 
 

@@ -92,38 +92,38 @@ Mozilla 的 Robert O'Callahan 一直在思考这个问题，并且提出了一�
       <button class="btn">开始！</button>
     </div>
     <script>
-      const square1El = document.querySelector(".square1");
-      const square2El = document.querySelector(".square2");
+      const square1El = document.querySelector('.square1')
+      const square2El = document.querySelector('.square2')
       // 定时器版
       function squareMove() {
-        let timer = null;
-        square1El.style.left = "0px";
+        let timer = null
+        square1El.style.left = '0px'
         timer = setInterval(() => {
-          const squareLeft = parseInt(square1El.style.left);
-          if (squareLeft >= 500) return clearInterval(timer);
-          square1El.style.left = squareLeft + 1 + "px";
-        }, 17);
+          const squareLeft = parseInt(square1El.style.left)
+          if (squareLeft >= 500) return clearInterval(timer)
+          square1El.style.left = squareLeft + 1 + 'px'
+        }, 17)
       }
 
       // requestAnimationFrame 版
       function squareMove2() {
-        let timer = null;
-        square2El.style.left = "0px";
+        let timer = null
+        square2El.style.left = '0px'
 
         function updateAnimation() {
-          const squareLeft = parseInt(square2El.style.left);
-          if (squareLeft >= 500) return cancelAnimationFrame(timer);
-          square2El.style.left = squareLeft + 1 + "px";
-          window.requestAnimationFrame(updateAnimation);
+          const squareLeft = parseInt(square2El.style.left)
+          if (squareLeft >= 500) return cancelAnimationFrame(timer)
+          square2El.style.left = squareLeft + 1 + 'px'
+          window.requestAnimationFrame(updateAnimation)
         }
 
-        window.requestAnimationFrame(updateAnimation);
+        window.requestAnimationFrame(updateAnimation)
       }
 
-      document.querySelector(".btn").addEventListener("click", () => {
-        squareMove();
-        squareMove2();
-      });
+      document.querySelector('.btn').addEventListener('click', () => {
+        squareMove()
+        squareMove2()
+      })
     </script>
   </body>
 </html>
@@ -150,3 +150,5 @@ Mozilla 的 Robert O'Callahan 一直在思考这个问题，并且提出了一�
 ### 参考资料
 
 [1]《JavaScript 高级程序设计(第四版)》第 18 章第 1 节。
+
+<Plum />

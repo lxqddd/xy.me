@@ -46,35 +46,35 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
       <span class="token keyword">const</span> tableBodyWrapHeight <span class="token operator">=</span>
-        document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">"table-body-wrap"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientHeight<span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'table-body-wrap'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientHeight
 
-      <span class="token keyword">const</span> tableBody <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">"table-body"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> tableBodyHeight <span class="token operator">=</span> tableBody<span class="token punctuation">.</span>clientHeight<span class="token punctuation">;</span>
+      <span class="token keyword">const</span> tableBody <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'table-body'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      <span class="token keyword">const</span> tableBodyHeight <span class="token operator">=</span> tableBody<span class="token punctuation">.</span>clientHeight
 
-      <span class="token keyword">let</span> diffHeight <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token keyword">let</span> diffHeight <span class="token operator">=</span> <span class="token number">0</span>
       <span class="token keyword">if</span> <span class="token punctuation">(</span>tableBodyHeight <span class="token operator">></span> tableBodyWrapHeight<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        diffHeight <span class="token operator">=</span> tableBodyHeight <span class="token operator">-</span> tableBodyWrapHeight<span class="token punctuation">;</span>
+        diffHeight <span class="token operator">=</span> tableBodyHeight <span class="token operator">-</span> tableBodyWrapHeight
       <span class="token punctuation">}</span>
 
-      <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+      <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
 
       <span class="token keyword">function</span> <span class="token function">tableBodyScroll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token function">clearInterval</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+          <span class="token function">clearInterval</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+          timer <span class="token operator">=</span> <span class="token keyword">null</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>diffHeight <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
-        <span class="token keyword">let</span> temp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>diffHeight <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span>
+        <span class="token keyword">let</span> temp <span class="token operator">=</span> <span class="token number">0</span>
         timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
           <span class="token keyword">if</span> <span class="token punctuation">(</span>temp <span class="token operator">&lt;</span> <span class="token operator">-</span>diffHeight<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            temp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            temp <span class="token operator">=</span> <span class="token number">0</span>
           <span class="token punctuation">}</span>
-          temp<span class="token operator">--</span><span class="token punctuation">;</span>
-          tableBody<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">translateY(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>temp<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          temp<span class="token operator">--</span>
+          tableBody<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">translateY(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>temp<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px)</span><span class="token template-punctuation string">`</span></span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span>
 
-      <span class="token function">tableBodyScroll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">tableBodyScroll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
@@ -97,37 +97,37 @@
 <p>在向谷哥请教的过程中我想到了一个 api，<code v-pre>requestAnimationFrame</code>，隐约记得这个 api 好像就是专门做动画用的，我现在遇到的问题也是动画的问题，用一下试试呗，以前都是只听别人说起过，自己没用过。</p>
 <p>查了一番 MDN，了解了基本用法，开始改造！</p>
 <div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">const</span> tableBodyWrapHeight <span class="token operator">=</span>
-  document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">"table-body-wrap"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientHeight<span class="token punctuation">;</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'table-body-wrap'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientHeight
 
-<span class="token keyword">const</span> tableBody <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">"table-body"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> tableBodyHeight <span class="token operator">=</span> tableBody<span class="token punctuation">.</span>clientHeight<span class="token punctuation">;</span>
+<span class="token keyword">const</span> tableBody <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByClassName</span><span class="token punctuation">(</span><span class="token string">'table-body'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> tableBodyHeight <span class="token operator">=</span> tableBody<span class="token punctuation">.</span>clientHeight
 
-<span class="token keyword">let</span> diffHeight <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> diffHeight <span class="token operator">=</span> <span class="token number">0</span>
 <span class="token keyword">if</span> <span class="token punctuation">(</span>tableBodyHeight <span class="token operator">></span> tableBodyWrapHeight<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  diffHeight <span class="token operator">=</span> tableBodyHeight <span class="token operator">-</span> tableBodyWrapHeight<span class="token punctuation">;</span>
+  diffHeight <span class="token operator">=</span> tableBodyHeight <span class="token operator">-</span> tableBodyWrapHeight
 <span class="token punctuation">}</span>
 
-<span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token number">0</span>
 
 <span class="token keyword">function</span> <span class="token function">tableBodyScroll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    window<span class="token punctuation">.</span><span class="token function">cancelAnimationFrame</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    timer <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    window<span class="token punctuation">.</span><span class="token function">cancelAnimationFrame</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+    timer <span class="token operator">=</span> <span class="token number">0</span>
   <span class="token punctuation">}</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>diffHeight <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> temp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>diffHeight <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span>
+  <span class="token keyword">let</span> temp <span class="token operator">=</span> <span class="token number">0</span>
   <span class="token keyword">function</span> <span class="token function">animation</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>temp <span class="token operator">&lt;</span> <span class="token operator">-</span>diffHeight<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      temp <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      temp <span class="token operator">=</span> <span class="token number">0</span>
     <span class="token punctuation">}</span>
-    temp<span class="token operator">--</span><span class="token punctuation">;</span>
-    tableBody<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">translateY(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>temp<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
-    timer <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>animation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    temp<span class="token operator">--</span>
+    tableBody<span class="token punctuation">.</span>style<span class="token punctuation">.</span>transform <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">translateY(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>temp<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px)</span><span class="token template-punctuation string">`</span></span>
+    timer <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>animation<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
-  timer <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>animation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  timer <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>animation<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 
-<span class="token function">tableBodyScroll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">tableBodyScroll</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这就是修改后的代码，改动的地方并不多，只是把动画部分把 <code v-pre>setInterval</code> 改成了用 <code v-pre>requestAnimationFrame</code> 进行递归调用，其他的逻辑都没变，来看看结果~
 <img src="https://files.mdnice.com/user/17954/c63d046d-45f2-4785-bca9-ba85b4a265bc.gif" alt=""></p>
 <p>不知道做成 gif 后你们能不能看的清啊 😂 ，实现的效果确实是如德芙一般顺滑。</p>
@@ -136,6 +136,6 @@
 <p>感兴趣的话欢迎关注 <em>「大话前端」</em>~</p>
 <p><img src="https://files.mdnice.com/user/17954/4909a416-d551-49d8-bf9a-70c3bdfb78c8.png" alt=""></p>
 <p><img src="https://img.soogif.com/5HkHKKxGJ6ZmhQ7c8nLYOE9jfEXDpqp4.gif?scope=mdnice" alt=""></p>
-</div></template>
+<Plum /></div></template>
 
 

@@ -89,6 +89,6 @@
 <li>指针移动之后，求一个临时面积 temp，这里在计算宽度的时候需要在 <code v-pre>j - i</code> 的基础上加 1，因为这里的 i 和 j 对应的是数组的下表，所以会比实际的宽度小 1</li>
 <li>比较临时面积 temp 和 area，将较大的那一个作为最终面积</li>
 </ol>
-</div></template>
+<Plum /></div></template>
 
 

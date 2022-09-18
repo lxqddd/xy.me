@@ -56,35 +56,35 @@ date: 2022-06-07
     </div>
     <script>
       const tableBodyWrapHeight =
-        document.getElementsByClassName("table-body-wrap")[0].clientHeight;
+        document.getElementsByClassName('table-body-wrap')[0].clientHeight
 
-      const tableBody = document.getElementsByClassName("table-body")[0];
-      const tableBodyHeight = tableBody.clientHeight;
+      const tableBody = document.getElementsByClassName('table-body')[0]
+      const tableBodyHeight = tableBody.clientHeight
 
-      let diffHeight = 0;
+      let diffHeight = 0
       if (tableBodyHeight > tableBodyWrapHeight) {
-        diffHeight = tableBodyHeight - tableBodyWrapHeight;
+        diffHeight = tableBodyHeight - tableBodyWrapHeight
       }
 
-      let timer = null;
+      let timer = null
 
       function tableBodyScroll() {
         if (timer) {
-          clearInterval(timer);
-          timer = null;
+          clearInterval(timer)
+          timer = null
         }
-        if (diffHeight === 0) return;
-        let temp = 0;
+        if (diffHeight === 0) return
+        let temp = 0
         timer = setInterval(() => {
           if (temp < -diffHeight) {
-            temp = 0;
+            temp = 0
           }
-          temp--;
-          tableBody.style.transform = `translateY(${temp}px)`;
-        }, 20);
+          temp--
+          tableBody.style.transform = `translateY(${temp}px)`
+        }, 20)
       }
 
-      tableBodyScroll();
+      tableBodyScroll()
     </script>
   </body>
 </html>
@@ -127,37 +127,37 @@ date: 2022-06-07
 
 ```javascript
 const tableBodyWrapHeight =
-  document.getElementsByClassName("table-body-wrap")[0].clientHeight;
+  document.getElementsByClassName('table-body-wrap')[0].clientHeight
 
-const tableBody = document.getElementsByClassName("table-body")[0];
-const tableBodyHeight = tableBody.clientHeight;
+const tableBody = document.getElementsByClassName('table-body')[0]
+const tableBodyHeight = tableBody.clientHeight
 
-let diffHeight = 0;
+let diffHeight = 0
 if (tableBodyHeight > tableBodyWrapHeight) {
-  diffHeight = tableBodyHeight - tableBodyWrapHeight;
+  diffHeight = tableBodyHeight - tableBodyWrapHeight
 }
 
-let timer = 0;
+let timer = 0
 
 function tableBodyScroll() {
   if (timer) {
-    window.cancelAnimationFrame(timer);
-    timer = 0;
+    window.cancelAnimationFrame(timer)
+    timer = 0
   }
-  if (diffHeight === 0) return;
-  let temp = 0;
+  if (diffHeight === 0) return
+  let temp = 0
   function animation() {
     if (temp < -diffHeight) {
-      temp = 0;
+      temp = 0
     }
-    temp--;
-    tableBody.style.transform = `translateY(${temp}px)`;
-    timer = window.requestAnimationFrame(animation);
+    temp--
+    tableBody.style.transform = `translateY(${temp}px)`
+    timer = window.requestAnimationFrame(animation)
   }
-  timer = window.requestAnimationFrame(animation);
+  timer = window.requestAnimationFrame(animation)
 }
 
-tableBodyScroll();
+tableBodyScroll()
 ```
 
 这就是修改后的代码，改动的地方并不多，只是把动画部分把 `setInterval` 改成了用 `requestAnimationFrame` 进行递归调用，其他的逻辑都没变，来看看结果~
@@ -174,3 +174,5 @@ tableBodyScroll();
 ![](https://files.mdnice.com/user/17954/4909a416-d551-49d8-bf9a-70c3bdfb78c8.png)
 
 ![](https://img.soogif.com/5HkHKKxGJ6ZmhQ7c8nLYOE9jfEXDpqp4.gif?scope=mdnice)
+
+<Plum />

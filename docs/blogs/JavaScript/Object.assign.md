@@ -29,15 +29,15 @@ emmmm，以上的定义是我照着红宝书一个字一个字敲出来的 😅�
 
 ```javascript
 const obj1 = {
-  name: "向阳",
-};
+  name: '向阳'
+}
 
 const obj2 = {
-  age: "18",
-};
+  age: '18'
+}
 
-const dest = Object.assign({}, obj1, obj2);
-console.log(dest);
+const dest = Object.assign({}, obj1, obj2)
+console.log(dest)
 ```
 
 ![](https://files.mdnice.com/user/17954/4f097e11-3955-4386-bd9a-d70734b895d3.png)
@@ -47,14 +47,14 @@ console.log(dest);
 再来看一段代码
 
 ```javascript
-const person = {};
+const person = {}
 
-Object.defineProperty(person, "name", {
-  value: "向阳",
-});
+Object.defineProperty(person, 'name', {
+  value: '向阳'
+})
 
-const dest = Object.assign({}, person);
-console.log(dest);
+const dest = Object.assign({}, person)
+console.log(dest)
 ```
 
 首先创建一个空对象 `person`，然后通过 `Object.defineProperty()` 这个方法给 `person` 对象上边添加一个属性 `name`，属性值为 `向阳`。
@@ -71,15 +71,15 @@ console.log(dest);
 全是 `false`。
 
 ```javascript
-const person = {};
+const person = {}
 
-Object.defineProperty(person, "name", {
-  value: "向阳",
-  enumerable: true, // 将属性设置为可枚举
-});
+Object.defineProperty(person, 'name', {
+  value: '向阳',
+  enumerable: true // 将属性设置为可枚举
+})
 
-const dest = Object.assign({}, person);
-console.log(dest);
+const dest = Object.assign({}, person)
+console.log(dest)
 ```
 
 现在将该属性的 `enumerable` 设置为 `true`，再来看看结果
@@ -89,31 +89,31 @@ console.log(dest);
 因为合并的过程是通过 `getter` 获取的源对象的属性值，通过 `setter` 对目标对象的值进行设置，结合这两个特性，咱再来看看另一种情况。
 
 ```javascript
-const src = {};
+const src = {}
 
-Object.defineProperty(src, "name", {
+Object.defineProperty(src, 'name', {
   enumerable: true, // 将属性设置为可枚举
   get() {
-    return "向阳";
-  },
-});
+    return '向阳'
+  }
+})
 
-const target = {};
-Object.defineProperty(target, "name", {
+const target = {}
+Object.defineProperty(target, 'name', {
   enumerable: true,
   get() {
-    return this.store_name;
+    return this.store_name
   },
   set(val) {
-    console.log(val);
-    this.store_name = val;
-  },
-});
+    console.log(val)
+    this.store_name = val
+  }
+})
 
-target.name = "夜殇";
+target.name = '夜殇'
 
-const dest = Object.assign(target, src);
-console.log(dest);
+const dest = Object.assign(target, src)
+console.log(dest)
 ```
 
 通过 `getter` 函数和 `setter` 函数来访问和设置对象的属性值，现在再来看一下结果。
@@ -121,29 +121,29 @@ console.log(dest);
 也是没有问题的，能正常合并；现在再来修改一下两个对象中 `getter` 函数和 `setter` 函数的内容。
 
 ```javascript
-const src = {};
+const src = {}
 
-Object.defineProperty(src, "name", {
+Object.defineProperty(src, 'name', {
   enumerable: true, // 将属性设置为可枚举
   get() {
-    return "向阳";
-  },
-});
+    return '向阳'
+  }
+})
 
-const target = {};
-Object.defineProperty(target, "name", {
+const target = {}
+Object.defineProperty(target, 'name', {
   enumerable: true,
   get() {
-    return this.store_name;
+    return this.store_name
   },
   set(val) {
-    console.log(val);
-    this.store_name = "夜殇";
-  },
-});
+    console.log(val)
+    this.store_name = '夜殇'
+  }
+})
 
-const dest = Object.assign(target, src);
-console.log(dest);
+const dest = Object.assign(target, src)
+console.log(dest)
 ```
 
 将目标对象 `target` 中 `name` 属性的 `setter` 函数做一下修改，不管后边对 `name` 属性如何赋值，我们都将其设置为 `夜殇`。现在再来看看输出的结果。
@@ -157,29 +157,29 @@ console.log(dest);
 来试一下呗……
 
 ```javascript
-const src = {};
+const src = {}
 
-Object.defineProperty(src, "name", {
+Object.defineProperty(src, 'name', {
   enumerable: true, // 将属性设置为可枚举
   get() {
-    throw new Error("merge error");
-  },
-});
+    throw new Error('merge error')
+  }
+})
 
-const target = {};
-Object.defineProperty(target, "name", {
+const target = {}
+Object.defineProperty(target, 'name', {
   enumerable: true,
   get() {
-    return this.store_name;
+    return this.store_name
   },
   set(val) {
-    console.log(val);
-    this.store_name = "夜殇";
-  },
-});
+    console.log(val)
+    this.store_name = '夜殇'
+  }
+})
 
-const dest = Object.assign(target, src);
-console.log(dest);
+const dest = Object.assign(target, src)
+console.log(dest)
 ```
 
 来看看结果
@@ -193,3 +193,5 @@ console.log(dest);
 ![](https://files.mdnice.com/user/17954/de44b0ae-dfa0-47aa-a965-e8aba9c3688b.png =60%x)
 如果觉得内容对你有用的话，欢迎关注哦~
 ![](https://img.soogif.com/5HkHKKxGJ6ZmhQ7c8nLYOE9jfEXDpqp4.gif?scope=mdnice)
+
+<Plum />
