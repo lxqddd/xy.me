@@ -1,7 +1,8 @@
 ---
 title: 主页
 sidebar: false
-lastUpdated: 2022-09-13
+lastUpdated: false
+contributors: false
 ---
 
 <Main />
