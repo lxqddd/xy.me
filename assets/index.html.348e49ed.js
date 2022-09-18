@@ -1,0 +1,1 @@
+import{_ as c,r as e,o as s,c as _,a as o}from"./app.e640ebd4.js";const l={};function r(a,m){const n=e("BlogList"),t=e("Plum");return s(),_("div",null,[o(n),o(t)])}const d=c(l,[["render",r],["__file","index.html.vue"]]);export{d as default};

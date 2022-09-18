@@ -1,0 +1,1 @@
+import{_ as e,o as _,c as a}from"./app.e640ebd4.js";const c={},n={class:"main"};function s(t,o){return _(),a("div",n," \u4E7E\u5764\u5DF2\u5B9A\uFF0C\u4F60\u6211\u7686\u662F\u725B\u9A6C! ")}const r=e(c,[["render",s],["__scopeId","data-v-a7caa903"],["__file","Main.vue"]]);export{r as default};

@@ -1,0 +1,1 @@
+import{_ as c,r as e,o as _,c as a,a as n}from"./app.e640ebd4.js";const r={};function s(l,m){const o=e("Main"),t=e("Plum");return _(),a("div",null,[n(o),n(t)])}const d=c(r,[["render",s],["__file","index.html.vue"]]);export{d as default};
