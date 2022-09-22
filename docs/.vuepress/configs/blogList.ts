@@ -95,7 +95,10 @@ export const blogList: BlogList = {
   Css: [],
   DesignPattern: [],
   Electron: [],
-  Essay: [],
+  Essay: [{
+    title: '开个头吧',
+    date: '2022-09-22'
+  }],
   JavaScript: [
     {
       title: '深入了解requestAnimationFrame',
