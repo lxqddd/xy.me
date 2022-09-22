@@ -8,7 +8,7 @@ import * as path from 'path'
 export default defineUserConfig({
   lang: 'zh-CN',
   title: '向阳',
-  description: '大话前端，向阳的JavaScript技术博客，向阳的博客，vue，JavaScript',
+  description: '大话前端, 向阳的JavaScript技术博客, 向阳的博客, vue, JavaScript',
   head: [
     ['link', {
       rel: 'icon',
