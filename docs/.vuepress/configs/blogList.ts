@@ -96,7 +96,7 @@ export const blogList: BlogList = {
   DesignPattern: [],
   Electron: [
     {
-      title: 'Electron 在 windows 终端打印中文乱码',
+      title: 'Electron 在 windows 终端打印中文乱码的问题',
       date: '2022-09-22'
     }
   ],
