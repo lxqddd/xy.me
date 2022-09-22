@@ -94,7 +94,12 @@ export const blogList: BlogList = {
   ],
   Css: [],
   DesignPattern: [],
-  Electron: [],
+  Electron: [
+    {
+      title: 'Electron 在 windows 终端打印中文乱码',
+      date: '2022-09-22'
+    }
+  ],
   Essay: [{
     title: '开个头吧',
     date: '2022-09-22'
