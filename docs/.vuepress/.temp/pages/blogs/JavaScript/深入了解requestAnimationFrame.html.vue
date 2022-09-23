@@ -112,6 +112,6 @@
 <img src="https://img.soogif.com/5HkHKKxGJ6ZmhQ7c8nLYOE9jfEXDpqp4.gif?scope=mdnice" alt=""></p>
 <h3 id="参考资料" tabindex="-1"><a class="header-anchor" href="#参考资料" aria-hidden="true">#</a> 参考资料</h3>
 <p>[1]《JavaScript 高级程序设计(第四版)》第 18 章第 1 节。</p>
-<Plum /></div></template>
+<Back /><Plum /></div></template>
 
 
