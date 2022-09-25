@@ -1,19 +1,22 @@
 <template>
   <div class="blog-list-wrap">
     <div class="blog-item-wrap">
-      <div
-        v-for="(blog, index) in curList"
-        :key="index"
-        class="blog-item"
-        @click="linkToBlogDetail(blog)"
-      >
-        <div class="title">{{ blog.title }}</div>
-        <div class="desc-wrap">
-          <div class="date">date: {{ blog.date }}</div>
-          <div class="author">author: {{ blog.author }}</div>
-          <div class="column">tag: {{ blog.column }}</div>
+      <template v-if="curList.length > 0">
+        <div
+          v-for="(blog, index) in curList"
+          :key="index"
+          class="blog-item"
+          @click="linkToBlogDetail(blog)"
+        >
+          <div class="title">{{ blog.title }}</div>
+          <div class="desc-wrap">
+            <div class="date">date: {{ blog.date }}</div>
+            <div class="author">author: {{ blog.author }}</div>
+            <div class="column">tag: {{ blog.column }}</div>
+          </div>
         </div>
-      </div>
+      </template>
+      <div v-else>该栏目暂无内容~</div>
     </div>
     <div class="column-wrap">
       <div

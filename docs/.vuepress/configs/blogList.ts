@@ -2,7 +2,7 @@ export type TypeKey = 'Algorithm' | 'Css' | 'DesignPattern' | 'Electron' | 'Java
 
 export const blogType: {
   label: string,
-  value: TypeKey
+  value: TypeKey | 'All'
 }[] = [
   {
     label: '算法',
@@ -36,7 +36,11 @@ export const blogType: {
     label: 'Vue',
     value:'VueSeries'
   },
-  ]
+  {
+    label: '全部',
+    value: 'All'
+  }
+]
 
 export type BlogList = {
   [key in TypeKey]: {
@@ -172,7 +176,7 @@ export type Blog = {
 }
 
 export const blogMap: {
-  [key in TypeKey]: Blog[]
+  [key in TypeKey | 'All']: Blog[]
 } = {
   Algorithm: [],
   Css: [],
@@ -181,12 +185,13 @@ export const blogMap: {
   JavaScript: [],
   VueSeries: [],
   tools: [],
-  Essay: []
+  Essay: [],
+  All: []
 }
 export let allBlog: Blog[] = []
 
 blogType.forEach((item) => {
-  if (blogList[item.value] && blogList[item.value].length > 0) {
+  if (blogList[item.value] && blogList[item.value]?.length > 0) {
     // @ts-ignore
     blogMap[item.value] = blogList[item.value].map((blog) => ({
       link: `/blogs/${item.value}/${blog.title}.html`,
@@ -206,5 +211,7 @@ for (const key in blogMap) {
     allBlog = allBlog.concat(blog)
   }
 }
+
+blogMap['All'] = allBlog
 
 allBlog.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
