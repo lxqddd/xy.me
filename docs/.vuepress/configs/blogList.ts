@@ -100,10 +100,15 @@ export const blogList: BlogList = {
       date: '2022-09-22'
     }
   ],
-  Essay: [{
-    title: '开个头吧',
-    date: '2022-09-22'
-  }],
+  Essay: [
+    {
+      title: '开个头吧',
+      date: '2022-09-22'
+    }, {
+      title: '9月24日逛西湖',
+      date: '2022-09-24'
+    }
+  ],
   JavaScript: [
     {
       title: '深入了解requestAnimationFrame',
