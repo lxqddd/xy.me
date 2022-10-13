@@ -111,6 +111,9 @@ export const blogList: BlogList = {
     }, {
       title: '9月24日逛西湖',
       date: '2022-09-24'
+    }, {
+      title: '十一返杭之后被集中隔离的日子',
+      date: '2022-10-13'
     }
   ],
   JavaScript: [

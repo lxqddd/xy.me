@@ -33,6 +33,8 @@ export const pagesComponents = {
   "v-4fba36c9": defineAsyncComponent(() => import(/* webpackChunkName: "v-4fba36c9" */"/Users/liuxq/Desktop/project/xy.me/docs/.vuepress/.temp/pages/blogs/Essay/9月24日逛西湖.html.vue")),
   // path: /blogs/Essay/%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83.html
   "v-7bc93ee2": defineAsyncComponent(() => import(/* webpackChunkName: "v-7bc93ee2" */"/Users/liuxq/Desktop/project/xy.me/docs/.vuepress/.temp/pages/blogs/Essay/关于如何学习的一些思考.html.vue")),
+  // path: /blogs/Essay/%E5%8D%81%E4%B8%80%E8%BF%94%E6%9D%AD%E4%B9%8B%E5%90%8E%E8%A2%AB%E9%9B%86%E4%B8%AD%E9%9A%94%E7%A6%BB%E7%9A%84%E6%97%A5%E5%AD%90.html
+  "v-75d0ddfc": defineAsyncComponent(() => import(/* webpackChunkName: "v-75d0ddfc" */"/Users/liuxq/Desktop/project/xy.me/docs/.vuepress/.temp/pages/blogs/Essay/十一返杭之后被集中隔离的日子.html.vue")),
   // path: /blogs/Essay/%E5%BC%80%E4%B8%AA%E5%A4%B4%E5%90%A7.html
   "v-6aae4ade": defineAsyncComponent(() => import(/* webpackChunkName: "v-6aae4ade" */"/Users/liuxq/Desktop/project/xy.me/docs/.vuepress/.temp/pages/blogs/Essay/开个头吧.html.vue")),
   // path: /blogs/JavaScript/JavaScript%E4%B9%8B%E7%BB%A7%E6%89%BF.html
