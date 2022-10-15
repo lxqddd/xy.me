@@ -3,6 +3,7 @@
     <div class="content">
       乾坤已定，你我皆是牛马!
     </div>
+    
   </div>
 </template>
 <style lang="scss" scoped>
