@@ -102,6 +102,9 @@ export const blogList: BlogList = {
     {
       title: 'Electron 在 windows 终端打印中文乱码的问题',
       date: '2022-09-22'
+    }, {
+      title: 'Electorn 安装失败解决方案',
+      date: '2022-10-18'
     }
   ],
   Essay: [
