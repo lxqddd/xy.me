@@ -1,0 +1,35 @@
+---
+import BaseLayout from './BaseLayout.astro'
+const { frontmatter } = Astro.props
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <slot />
+  <div class="back-wrap">
+    <div class="back">cd ..</div>
+  </div>
+</BaseLayout>
+<script>
+  document.getElementsByClassName('back')[0].addEventListener('click', () => {
+    history.back()
+  })
+</script>
+
+<style lang="scss">
+  .back-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .back {
+      width: 60px;
+      height: 30px;
+      margin-bottom: 50px;
+      margin-top: 30px;
+      cursor: pointer;
+      opacity: 0.6;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+</style>

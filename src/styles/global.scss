@@ -1,0 +1,113 @@
+:root {
+  --c-bg: #fff;
+  --c-scrollbar: #eee;
+  --c-scrollbar-hover: #bbb;
+  --color: #050505;
+  --c-text: #000;
+  --navbar-height: 90px;
+  --c-bg-lighter: #e3e3e3;
+  --h-color: #222;
+  --co-bg: #f1f1f1;
+}
+
+html.dark {
+  --c-bg: #050505;
+  --c-scrollbar: #111;
+  --c-scrollbar-hover: #222;
+  --color: #fff;
+  --c-text: #fff;
+  --c-text-lighter: #d8dee2;
+  --c-bg-lighter: #313438;
+  --h-color: #fff;
+  --co-bg: #3a3a3a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: var(--c-bg);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-scrollbar);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-scrollbar-hover);
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: var(--c-scrollbar) var(--c-bg);
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  background-color: var(--c-bg);
+  color: var(--color);
+}
+
+.astro-code {
+  padding: 16px;
+  border-radius: 4px;
+  margin: 8px 0px;
+}
+.astro-code > * {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace !important;
+}
+
+blockquote {
+  background-color: var(--c-bg-lighter);
+  margin: 0px;
+  border-left: 4px solid rgb(90, 184, 238);
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+}
+
+li code,
+p code {
+  background-color: var(--co-bg);
+  color: #c5b25c;
+  padding: 0px 6px 2px;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 2rem;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--h-color);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+p img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 16px 0px;
+}
+
+img.expression {
+  font-size: 0px;
+  border-radius: 8px;
+  margin: 8px 0px;
+  width: 300px;
+  height: 300px;
+}

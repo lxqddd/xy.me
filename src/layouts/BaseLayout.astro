@@ -1,0 +1,32 @@
+---
+import '../styles/global.scss'
+import Navigation from '../components/Navigation.vue'
+import Plum from '../components/Plum.vue'
+const { pageTitle } = Astro.props
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Navigation client:load />
+    <div id="app">
+      <slot />
+    </div>
+    <Plum client:load />
+  </body>
+</html>
+
+<style lang="scss">
+  #app {
+    max-width: 650px;
+    margin: auto;
+    padding: 0px 1rem;
+  }
+</style>

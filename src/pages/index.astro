@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout pageTitle="首页">
+  <div class="home-page">乾坤已定，你我皆是牛马</div>
+  <div class="goven">备案号：浙ICP备2021036330号-1</div>
+</BaseLayout>
+
+<style lang="scss">
+  .home-page {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%);
+    font-size: 2rem;
+    text-align: center;
+  }
+  .goven {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0.6;
+    font-size: 0.5rem;
+  }
+</style>

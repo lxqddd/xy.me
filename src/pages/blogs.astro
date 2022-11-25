@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogList from '../components/BlogList.vue'
+import dayjs from 'dayjs'
+
+const blogList = await Astro.glob('../pages/blogs/*.md')
+---
+
+<BaseLayout pageTitle="博客列表">
+  <BlogList client:load blogList={blogList} />
+</BaseLayout>
