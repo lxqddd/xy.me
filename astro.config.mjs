@@ -14,5 +14,6 @@ export default defineConfig({
       wrap: true
     }
   },
-  integrations: [vue()]
+  integrations: [vue()],
+  site: 'https://me.liuxiangqian.cn/'
 })

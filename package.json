@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@astrojs/rss": "^1.0.3",
     "@astrojs/vue": "^1.2.1",
     "@vueuse/core": "^9.5.0",
     "astro": "^1.6.2",
