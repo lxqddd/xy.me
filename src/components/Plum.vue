@@ -139,6 +139,6 @@ const mask = computed(() => 'radial-gradient(circle, transparent, black);')
   right: 0;
   pointer-events: none;
   z-index: -1;
-  backdrop-filter: blur(1px)
+  backdrop-filter: blur(1px);
 }
 </style>
