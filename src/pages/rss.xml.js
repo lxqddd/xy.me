@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss'
 
-const blogImportResult = import.meta.globEager('./blogs/*.md')
-const blogs = Object.values(blogImportResult)
+// const blogImportResult = import.meta.globEager('./blogs/*.md')
+// const blogs = Object.values(blogImportResult)
 
 export const get = () =>
   rss({
@@ -15,11 +15,7 @@ export const get = () =>
     // 输出的 xml 中的 `<item>` 列表
     // 简单示例：为 `/src/pages` 中的每个 md 文件生成项目
     // 参见“生成项目”部分，了解需要的 frontmatter 和高级用例。
-    items: blogs.map((blog) => ({
-      link: blog.frontmatter.slug,
-      title: blog.frontmatter.title,
-      pubDate: blog.frontmatter.date
-    })),
+    items: import.meta.glob('./**/*.md'),
     // （可选）注入自定义 xml
     customData: `<language>zh-cn</language>`,
     stylesheet: '/rss/styles.xsl'
