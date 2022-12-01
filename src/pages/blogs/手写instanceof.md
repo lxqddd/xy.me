@@ -1,7 +1,7 @@
 ---
 title: 手写 instanceof
 author: 向阳
-date: 2022-02-20
+pubDate: 2022-02-20
 tag: 'JavaScript'
 layout: '../../layouts/PostLayout.astro'
 ---

@@ -31,7 +31,7 @@ const curBlogList = ref(blogList)
 
 onMounted(() => {
   blogList.sort((a: IBlog, b: IBlog) => {
-    return dayjs(b.frontmatter.date).valueOf() - dayjs(a.frontmatter.date).valueOf()
+    return dayjs(b.frontmatter.pubDate).valueOf() - dayjs(a.frontmatter.pubDate).valueOf()
   })
   getTags()
 })

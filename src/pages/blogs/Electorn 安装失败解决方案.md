@@ -1,7 +1,7 @@
 ---
 title: Electorn 安装失败解决方案
 author: 向阳
-date: 2022-10-18
+pubDate: 2022-10-18
 desc: electron 安装失败的解决方案
 tag: 'Electron'
 layout: '../../layouts/PostLayout.astro'

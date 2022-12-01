@@ -12,7 +12,7 @@ export type Tag =
 export interface IBlogFrontmatter {
   title: string
   author: string
-  date: Date
+  pubDate: Date
   tag: Tag
   layout: string
 }

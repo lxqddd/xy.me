@@ -1,7 +1,7 @@
 ---
 title: 你真的了解Object.assign()吗？
 author: 向阳
-date: 2022-01-23
+pubDate: 2022-01-23
 tag: 'JavaScript'
 layout: '../../layouts/PostLayout.astro'
 ---

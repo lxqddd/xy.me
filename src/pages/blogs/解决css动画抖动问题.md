@@ -1,7 +1,7 @@
 ---
 title: 解决css动画抖动问题
 author: 向阳
-date: 2022-06-07
+pubDate: 2022-06-07
 tag: 'JavaScript'
 layout: '../../layouts/PostLayout.astro'
 ---

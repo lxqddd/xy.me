@@ -1,7 +1,7 @@
 ---
 title: 深入了解requestAnimationFrame
 author: 向阳
-date: 2022-06-12
+pubDate: 2022-06-12
 tag: 'JavaScript'
 layout: '../../layouts/PostLayout.astro'
 ---

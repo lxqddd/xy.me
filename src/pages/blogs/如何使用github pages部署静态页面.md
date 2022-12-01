@@ -1,7 +1,7 @@
 ---
 title: 如何使用github pages部署静态页面
 author: 向阳
-date: 2021-08-22
+pubDate: 2021-08-22
 tag: 'tools'
 layout: '../../layouts/PostLayout.astro'
 ---

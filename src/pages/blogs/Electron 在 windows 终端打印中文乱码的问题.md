@@ -1,7 +1,7 @@
 ---
 title: Electron 在 windows 终端打印中文乱码的问题
 author: 向阳
-date: 2022-09-22
+pubDate: 2022-09-22
 tag: 'Electron'
 layout: '../../layouts/PostLayout.astro'
 ---

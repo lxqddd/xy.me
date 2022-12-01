@@ -2,7 +2,7 @@
   <div class="blog-list-item" @click="routeLink(blogInfo.url)">
     <div class="title">{{ blogInfo.frontmatter.title }}</div>
     <div class="desc-wrap">
-      <div class="date">date: {{ dayjs(blogInfo.frontmatter.date).format('YYYY-MM-DD') }}</div>
+      <div class="date">date: {{ dayjs(blogInfo.frontmatter.pubDate).format('YYYY-MM-DD') }}</div>
       <div class="author">author: {{ blogInfo.frontmatter.author }}</div>
       <div class="tag">tag: {{ blogInfo.frontmatter.tag }}</div>
     </div>

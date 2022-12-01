@@ -1,7 +1,7 @@
 ---
 title: 为什么要用虚拟 DOM
 author: 向阳
-date: 2022-08-14
+pubDate: 2022-08-14
 tag: 'VueSeries'
 layout: '../../layouts/PostLayout.astro'
 ---
