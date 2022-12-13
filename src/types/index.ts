@@ -15,6 +15,7 @@ export interface IBlogFrontmatter {
   pubDate: Date
   tag: Tag
   layout: string
+  draft?: boolean
 }
 
 export interface IBlog {

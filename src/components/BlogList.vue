@@ -26,13 +26,15 @@ const props = defineProps({
 })
 
 const tags = ref<ITag[]>([])
-const blogList = props.blogList as IBlog[]
-const curBlogList = ref(blogList)
+let blogList = props.blogList as IBlog[]
+const curBlogList = ref<IBlog[]>()
 
 onMounted(() => {
   blogList.sort((a: IBlog, b: IBlog) => {
     return dayjs(b.frontmatter.pubDate).valueOf() - dayjs(a.frontmatter.pubDate).valueOf()
   })
+  blogList = blogList.filter(item => item.frontmatter.draft === false || item.frontmatter.draft === undefined)
+  curBlogList.value = blogList
   getTags()
 })
 
@@ -41,15 +43,17 @@ const getTags = () => {
   const tagsMap: Record<string, number> = {}
   blogList.forEach(item => {
     const tag = item.frontmatter.tag
-    if (!tagList.includes(tag)) {
+    if (!tagList.includes(tag) && tag !== undefined) {
+      console.log(tag)
       tagList.push(tag)
     }
     if (tagsMap[tag]) {
       tagsMap[tag] += 1
-    } else {
+    } else if (tag) {
       tagsMap[tag] = 1
     }
   })
+  console.log(tagsMap)
   Object.keys(tagsMap).forEach(item => {
     tags.value.push({
       tagName: item as Tag,
