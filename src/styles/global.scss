@@ -8,6 +8,7 @@
   --c-bg-lighter: #e3e3e3;
   --h-color: #222;
   --co-bg: #f1f1f1;
+  --blockquote-bl: rgba(18, 181, 157, 1);
 }
 
 html.dark {
@@ -20,6 +21,7 @@ html.dark {
   --c-bg-lighter: #313438;
   --h-color: #fff;
   --co-bg: #3a3a3a;
+  --blockquote-bl: rgba(18, 181, 157, 1);
 }
 
 ::-webkit-scrollbar {
@@ -65,8 +67,8 @@ html {
 
 blockquote {
   background-color: var(--c-bg-lighter);
-  margin: 0px;
-  border-left: 4px solid rgb(90, 184, 238);
+  margin: 0.5rem 0;
+  border-left: 6px solid var(--blockquote-bl);
   border-radius: 4px;
   padding-left: 20px;
   padding-top: 8px;
