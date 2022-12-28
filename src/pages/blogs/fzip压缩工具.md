@@ -2,7 +2,7 @@
 title: fzip 压缩工具
 author: 向阳
 pubDate: 2022-05-30
-tag: 'tools'
+tag: 'Tools'
 layout: '../../layouts/PostLayout.astro'
 ---
 

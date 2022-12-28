@@ -33,8 +33,8 @@ onMounted(() => {
   blogList.sort((a: IBlog, b: IBlog) => {
     return dayjs(b.frontmatter.pubDate).valueOf() - dayjs(a.frontmatter.pubDate).valueOf()
   })
-  blogList = blogList.filter(item => item.frontmatter.draft === false || item.frontmatter.draft === undefined)
   curBlogList.value = blogList
+  console.log(curBlogList.value)
   getTags()
 })
 
@@ -43,8 +43,7 @@ const getTags = () => {
   const tagsMap: Record<string, number> = {}
   blogList.forEach(item => {
     const tag = item.frontmatter.tag
-    if (!tagList.includes(tag) && tag !== undefined) {
-      console.log(tag)
+    if (!tagList.includes(tag)) {
       tagList.push(tag)
     }
     if (tagsMap[tag]) {
@@ -53,7 +52,6 @@ const getTags = () => {
       tagsMap[tag] = 1
     }
   })
-  console.log(tagsMap)
   Object.keys(tagsMap).forEach(item => {
     tags.value.push({
       tagName: item as Tag,
@@ -86,7 +84,7 @@ const handleCheckTag = (tag: ITag) => {
   }
 
   .tag-list {
-    width: 200px;
+    width: 180px;
     .tag-item {
       display: flex;
       align-items: center;

@@ -10,9 +10,10 @@ const { frontmatter } = Astro.props
   </div>
 </BaseLayout>
 <script>
-  document.getElementsByClassName('back')[0].addEventListener('click', () => {
-    history.back()
-  })
+  document.getElementsByClassName('back')[0] &&
+    document.getElementsByClassName('back')[0].addEventListener('click', () => {
+      history.back()
+    })
 </script>
 
 <style lang="scss">

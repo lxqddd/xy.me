@@ -2,7 +2,7 @@
 title: 解决github访问速度慢的问题
 author: 向阳
 pubDate: 2022-02-16
-tag: 'tools'
+tag: 'Tools'
 layout: '../../layouts/PostLayout.astro'
 ---
 
