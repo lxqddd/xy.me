@@ -53,6 +53,11 @@ html.dark {
 html {
   background-color: var(--c-bg);
   color: var(--color);
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
 }
 
 .astro-code {

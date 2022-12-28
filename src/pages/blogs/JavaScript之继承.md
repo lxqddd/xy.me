@@ -1,8 +1,8 @@
 ---
 title: JavaScript之继承
 author: 向阳
-date: 2022-01-05
-pubDate: 'JavaScript'
+pubDate: 2022-01-05
+tag: 'JavaScript'
 layout: '../../layouts/PostLayout.astro'
 ---
 
