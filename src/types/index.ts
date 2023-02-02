@@ -8,6 +8,7 @@ export type Tag =
   | 'VueSeries'
   | 'Css'
   | 'Typescript'
+  | 'CI/CD'
   | 'All'
 
 export interface IBlogFrontmatter {
