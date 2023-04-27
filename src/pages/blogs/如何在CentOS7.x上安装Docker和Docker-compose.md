@@ -1,7 +1,7 @@
 ---
 title: 如何在 CentOS 7.x 上安装 Docker 和 Docker-compose
 author: 向阳
-pubDate: 2023-02-02
+pubDate: 2023-04-27
 desc: 如何在 CentOS 7.x 上安装 Docker 和 Docker-compose
 tag: 'CI/CD'
 layout: '../../layouts/PostLayout.astro'
