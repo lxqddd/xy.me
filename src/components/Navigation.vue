@@ -72,8 +72,8 @@ import { isDark, toggleTheme } from '../hooks/toggleTheme'
 <style lang="scss">
 .logo {
   position: absolute;
-  left: 24px;
-  top: 24px;
+  left: 20px;
+  top: 20px;
   z-index: 9;
   cursor: pointer;
   opacity: 0.9;
@@ -83,8 +83,9 @@ import { isDark, toggleTheme } from '../hooks/toggleTheme'
 }
 .navigation {
   position: relative;
-  padding: 2rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
   width: 100%;
+  min-width: 375px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

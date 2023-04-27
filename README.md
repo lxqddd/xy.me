@@ -1,2 +1,7 @@
-# astro-test
-使用astro重新构建博客
+## 向阳的博客
+
+### 图片使用
+
+```html
+<img class="self-pic" src="图片地址" />
+```

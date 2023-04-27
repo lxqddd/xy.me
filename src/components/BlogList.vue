@@ -34,7 +34,6 @@ onMounted(() => {
     return dayjs(b.frontmatter.pubDate).valueOf() - dayjs(a.frontmatter.pubDate).valueOf()
   })
   curBlogList.value = blogList
-  console.log(curBlogList.value)
   getTags()
 })
 
@@ -78,6 +77,8 @@ const handleCheckTag = (tag: ITag) => {
 <style lang="scss" scoped>
 .blog-list-wrap {
   display: flex;
+  max-width: 750px;
+  margin: 0 auto;
 
   .blog-list {
     flex: 1;
