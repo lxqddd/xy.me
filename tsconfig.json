@@ -1,13 +1,5 @@
 {
-  "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "types": ["astro/client"],
-    "jsx": "preserve",
-    "paths": {
-      "@comp/*": ["./src/components/*"],
-      "@assets/*": ["./src/assets/*"]
-    }
-  },
-  "include": ["./src"],
-  "exclude": ["node_modules"]
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "includes": ["@/utils/*.ts"]
 }

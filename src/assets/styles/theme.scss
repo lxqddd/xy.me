@@ -1,0 +1,34 @@
+:root {
+  /* common var */
+  --common-transition: all 0.3s ease;
+  --common-rd: 0.5em;
+  --common-bd:#c9c7c2;
+}
+
+html {
+  --primary: #0d0d0d;
+  --c-bg: #fff;
+  --c-scrollbar: #ccc;
+  --c-scrollbar-hover: #aaa;
+  --input-bg:#fff;
+  --common-bg: #f8f8f8;
+  --code-bg: #F6F5F4;
+  --copy-bg: #dcdcdc;
+  --copy-border: #3c3c4380;
+  --copy-bg-hover: #d2d3d2;
+  --copied-bg: #6e903c80;
+}
+
+html.dark {
+  --primary: #ebebeb;
+  --c-bg: #141414;
+  --c-scrollbar: #555;
+  --c-scrollbar-hover: #777;
+  --input-bg:#222;
+  --common-bg: #0e0e0e;
+  --code-bg: #36332E;
+  --copy-bg: rgba(125,125,125,.1);
+  --copy-border: rgba(82, 82, 89, .32);;
+  --copy-bg-hover: rgba(125,125,125,.2);;
+  --copied-bg: rgba(110, 144, 60, 0.2);
+}

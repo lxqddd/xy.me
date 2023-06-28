@@ -1,31 +1,10 @@
-export type Tag =
-  | 'Essay'
-  | 'Electron'
-  | 'JavaScript'
-  | 'Tools'
-  | 'Finance'
-  | 'Algorithm'
-  | 'VueSeries'
-  | 'Css'
-  | 'Typescript'
-  | 'All'
-
-export interface IBlogFrontmatter {
-  title: string
+export interface IPost {
   author: string
+  title: string
+  description?: ''
+  draft: boolean
+  path: string
   pubDate: Date
-  tag: Tag
-  layout: string
-  draft?: boolean
-}
-
-export interface IBlog {
-  file: string
-  frontmatter: IBlogFrontmatter
-  url: string
-}
-
-export interface ITag {
-  tagName: Tag
-  num: number
+  tag: string
+  year: string
 }

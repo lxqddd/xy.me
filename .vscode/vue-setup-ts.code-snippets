@@ -1,0 +1,18 @@
+{
+  "vue setup template": {
+    "prefix": "setup",
+    "body": [
+      "<template>",
+      "  <div>$2</div>",
+      "</template>",
+      "",
+      "<script setup>",
+      "$1",
+      "</script>",
+      "",
+      "<style lang=\"scss\" scoped></style>",
+      ""
+    ],
+    "description": "vue setup template"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "extends": ["@antfu", "@unocss"],
+  "rules": {
+    "@typescript-eslint/comma-dangle": ["error", "never"],
+    "vue/component-tags-order": "off",
+    "no-console": "off"
+  }
+}

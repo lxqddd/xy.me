@@ -1,0 +1,33 @@
+---
+title: 两数之和
+pubDate: 2022-08-08
+author: 向阳
+tag: 'Algorithm'
+ 
+---
+
+# 两数之和
+
+1. 题目的要求是在一个数组中寻找到两数之和等于目标值的两个数据在数组中的位置。并且有提示说，在一个数组中只存在一组这样的数据。
+2. 因为是两个数据相加，所以最简单的方法就是在数据中，通过遍历，将所有的数据都进行两两相加，跟目标值做对比。
+3. 要达到将所有数据都相加一遍的目的，就需要用到双重循环。其实这有点类似于与有两个游标，第一个游标选中一个数据之后，另一个右边进行移动，在移动的过程中将两个游标指向的数据相加跟目标值做对比。如果两个游标对应的值相加的结果跟目标值一致，那就将这两个游标返回。
+
+## 完整代码
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function (nums, target) {
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j]
+      }
+    }
+  }
+  return null
+}
+```
