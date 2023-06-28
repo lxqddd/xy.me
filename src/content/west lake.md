@@ -8,16 +8,16 @@ tag: 'Essay'
 
 ## 9 月 24 日逛西湖
 
-![西湖](/assets/images/essay/westLake/westLake6.jpeg)
-![西湖](/assets/images/essay/westLake/westLake7.jpeg)
-![西湖](/assets/images/essay/westLake/westLake8.jpeg)
-![西湖](/assets/images/essay/westLake/westLake9.jpeg)
-![西湖](/assets/images/essay/westLake/westLake10.jpeg)
-![西湖](/assets/images/essay/westLake/westLake11.jpeg)
-![西湖](/assets/images/essay/westLake/westLake12.jpeg)
-![西湖](/assets/images/essay/westLake/westLake13.jpeg)
-![西湖](/assets/images/essay/westLake/westLake14.jpeg)
-![西湖](/assets/images/essay/westLake/westLake4.jpeg)
-![西湖](/assets/images/essay/westLake/westLake3.jpeg)
-![西湖](/assets/images/essay/westLake/westLake1.jpeg)
-![西湖](/assets/images/essay/westLake/westLake2.jpeg)
+<img class='self-pic' src="/assets/images/essay/westLake/westLake6.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake7.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake8.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake9.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake10.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake11.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake12.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake13.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake14.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake4.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake3.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake1.jpeg" />
+<img class='self-pic' src="/assets/images/essay/westLake/westLake2.jpeg" />
