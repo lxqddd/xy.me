@@ -3,7 +3,7 @@ title: 手写 instanceof
 author: 向阳
 pubDate: 2022-02-20
 tag: 'JavaScript'
- 
+description: 手写 instanceof
 ---
 
 手写什么什么的实现，一般是我比较怂的。今天来写一个简单点的，手动实现一次 `instanceof` 运算符。

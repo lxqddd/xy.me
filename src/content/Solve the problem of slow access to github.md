@@ -3,7 +3,7 @@ title: 解决github访问速度慢的问题
 author: 向阳
 pubDate: 2022-02-16
 tag: 'Tools'
- 
+description: 解决github访问速度慢的问题
 ---
 
 1. 浏览器访问这个网站 `https://www.ipaddress.com/`

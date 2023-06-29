@@ -3,7 +3,7 @@ title: fzip 压缩工具
 author: 向阳
 pubDate: 2022-05-30
 tag: 'Tools'
- 
+description: 压缩工具
 ---
 
 hello，最近写了一个压缩文件的命令行工具，今天分享给大家。

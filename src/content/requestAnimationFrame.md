@@ -3,7 +3,7 @@ title: 深入了解requestAnimationFrame
 author: 向阳
 pubDate: 2022-06-12
 tag: 'JavaScript'
- 
+description: 深入了解requestAnimationFrame
 ---
 
 前段时间在使用 JavaScript 做动画的时候发现做出来的动画会出现卡顿的现象，今天我们主要就来聊一下卡顿的原因以及如何解决这个问题。

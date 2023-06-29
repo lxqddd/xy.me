@@ -3,10 +3,9 @@ title: 原型-原型链
 author: 向阳
 pubDate: 2021-12-26
 tag: 'JavaScript'
- 
+description: 原型-原型链
 ---
 
-# 原型-原型链
 
 原型链的问题似乎一直都是一个老生常谈的问题，今天让我们一起来重新捋一下。
 

@@ -3,10 +3,9 @@ title: 你真的了解Object.assign()吗？
 author: 向阳
 pubDate: 2022-01-23
 tag: 'JavaScript'
- 
+description: 你真的了解Object.assign()吗？
 ---
 
-# 你真的了解 Object.assign()吗？
 
 `Object.assign()` 这个方法在开发的时候算是用的比较多的一个方法了，使用他的场景大概也就是合并两个或多个对象。但是最近在看红宝书的时候发现在使用这个方法的时候可能会出现一些意料之外的结果，这是我之前不了解的，所以今天也拿出来分享给大家。
 

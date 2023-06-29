@@ -2,12 +2,10 @@
 title: Electorn 安装失败解决方案
 author: 向阳
 pubDate: 2022-10-18
-desc: electron 安装失败的解决方案
+description: electron 安装失败的解决方案
 tag: 'Electron'
- 
----
 
-## Electron 安装失败解决方案
+---
 
 ### 问题描述
 

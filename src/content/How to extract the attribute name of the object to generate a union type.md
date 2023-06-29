@@ -2,9 +2,8 @@
 title: 如何将对象的属性名提取出来生成一个联合类型
 author: 向阳
 pubDate: 2023-06-09
-desc: 如何将对象的属性名提取出来生成一个联合类型
+description: 如何将对象的属性名提取出来生成一个联合类型
 tag: 'TypeScript'
-layout: '../../layouts/PostLayout.astro'
 ---
 
 今天在一个技术群里听到有人在问如何把 json 的第一层属性名提取出来，生成一个联合类型，我想了一下，写了个 demo，在这里记录一下

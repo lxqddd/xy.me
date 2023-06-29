@@ -3,8 +3,7 @@ title: Electron 入门系列（二）
 author: 向阳
 pubDate: 2022-12-16
 tag: 'Electron'
- 
-draft: false
+description: electron
 ---
 
 ## 进程之间通信

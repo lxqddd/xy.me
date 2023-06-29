@@ -3,10 +3,9 @@ title: JavaScript之继承
 author: 向阳
 pubDate: 2022-01-05
 tag: 'JavaScript'
- 
+description: JavaScript之继承
 ---
 
-# 继承
 
 继承是面向对象编程中讨论最多的话题。那 JavaScript 作为一门非面向对象的语言如何实现继承呢？本文在这里介绍了六种常见的 JavaScript 实现继承的方式，话不多说，开干
 ![](https://files.mdnice.com/user/17954/8697b2ab-d6b1-4b4a-9965-0b70047c5390.png)

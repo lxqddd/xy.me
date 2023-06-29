@@ -2,13 +2,10 @@
 title: 关于如何学习的一些思考
 author: 向阳
 pubDate: 2022-09-23
-describe: 关于如何学习
+description: 关于如何学习的一些思考
 tag: 'Essay'
 draft: true
- 
 ---
-
-## 关于如何学习的一些思考
 
 前两天在一个交流群里看到了一些关于如何学习的讨论，自己有了一些想法。
 

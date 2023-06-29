@@ -3,10 +3,8 @@ title: Electron 在 windows 终端打印中文乱码的问题
 author: 向阳
 pubDate: 2022-09-22
 tag: 'Electron'
- 
+description: Electron 在 windows 终端打印中文乱码的问题
 ---
-
-## Electron 在 windows 终端打印中文乱码的问题
 
 - 问题原因：
 

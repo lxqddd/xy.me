@@ -2,7 +2,7 @@
 title: 如何搭建一个gitLab服务器
 author: 向阳
 pubDate: 2023-02-02
-desc: 如何搭建一个gitLab服务器
+description: 如何搭建一个gitLab服务器
 tag: 'CI/CD'
 layout: '../../layouts/PostLayout.astro'
 ---

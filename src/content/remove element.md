@@ -3,10 +3,8 @@ title: 移除元素
 pubDate: 2022-08-15
 author: 向阳
 tag: 'Algorithm'
- 
+description: 移除元素
 ---
-
-# 移除元素
 
 1. 定义一个指针，通过 while 循环，遍历数组
 2. 判断指针指向的当前值和目标值是否相等，如果相等，则移除当前项
