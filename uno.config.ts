@@ -48,7 +48,8 @@ export default defineConfig({
       collections: {
         'icon-park-outline': () => import('@iconify-json/icon-park-outline/icons.json').then(i => i.default),
         'simple-icons': () => import('@iconify-json/simple-icons/icons.json').then(i => i.default),
-        'line-md': () => import('@iconify-json/line-md/icons.json').then(i => i.default)
+        'line-md': () => import('@iconify-json/line-md/icons.json').then(i => i.default),
+        'logos': () => import('@iconify-json/logos/icons.json').then(i => i.default)
       }
     })
   ],

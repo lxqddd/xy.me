@@ -2,7 +2,7 @@
 title: 为什么要用虚拟 DOM ?
 author: 向阳
 pubDate: 2022-08-14
-tag: 'VueSeries'
+tag: 'Vue'
 description: 为什么要用虚拟 DOM ?
 ---
 

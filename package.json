@@ -21,6 +21,7 @@
     "@antfu/eslint-config": "^0.39.5",
     "@giscus/vue": "^2.2.8",
     "@iconify-json/line-md": "^1.1.25",
+    "@iconify-json/logos": "^1.1.33",
     "@nuxt/content": "^2.7.0",
     "@nuxt/devtools": "latest",
     "@types/node": "^18",

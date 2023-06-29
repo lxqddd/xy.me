@@ -4,13 +4,9 @@
       v-for="item in blogMap"
       :key="item[0]"
     >
-      <div
-        slide-enter pointer-events-none relative h20 select-none
-      >
-        <span
-          absolute left--3rem top--2rem text-8em font-bold color-transparent text-stroke-2 text-stroke-hex-aaa op10
-        >{{ item[0] }}</span>
-      </div>
+      <divslide-enter pointer-events-none relative h20 select-none>
+        <span absolute left--3rem top--2rem text-8em font-bold color-transparent text-stroke-2 text-stroke-hex-aaa op10>{{ item[0] }}</span>
+      </divslide-enter>
       <div
         v-for="content in item[1]"
         :key="content.path"

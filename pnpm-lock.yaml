@@ -34,6 +34,9 @@ devDependencies:
   '@iconify-json/line-md':
     specifier: ^1.1.25
     version: 1.1.25
+  '@iconify-json/logos':
+    specifier: ^1.1.33
+    version: 1.1.33
   '@nuxt/content':
     specifier: ^2.7.0
     version: 2.7.0
@@ -814,6 +817,12 @@ packages:
 
   /@iconify-json/line-md@1.1.25:
     resolution: {integrity: sha512-78d8RFQMj4zdGfEgPi74365sQD10aKyV8SoW6tY7vOH5hILIJQyI5xIzaX7QnsFrEm7UYzk+l1KoOaRfoHouxA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/logos@1.1.33:
+    resolution: {integrity: sha512-XHnob/dyib1oCaHZV0yRLXUfGQAr46pTuO/Y+jx9ImVBVb5jyZfJ+PLgro5pp8fyQkXWV2vq7pdR0yP5s4gcvg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
