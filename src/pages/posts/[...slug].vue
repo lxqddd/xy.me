@@ -5,11 +5,20 @@
         <DocBack />
         <DocRender :article="doc" />
         <DocToc :toc="doc.body.toc" />
-        <!-- <Giscus
-          repo="chansee97/nuxt-blog" repo-id="R_kgDOJZM7Qg" category="comments"
-          category-id="DIC_kwDOJZM7Qs4CW1GZ" mapping="title" term="Welcome to my blog!" reactions-enabled="1"
-          emit-metadata="1" input-position="top" theme="light_tritanopia" lang="zh-CN" loading="lazy"
-        /> -->
+        <Giscus
+          repo="lxqddd/xy.me"
+          repo-id="R_kgDOHuwO5w"
+          category="Announcements"
+          category-id="DIC_kwDOHuwO584CXXUA"
+          mapping="pathname"
+          term="Welcome to my blog!"
+          reactions-enabled="1"
+          emit-metadata="1"
+          input-position="top"
+          :theme="giscusTheme"
+          lang="zh-CN"
+          loading="lazy"
+        />
       </template>
 
       <template #empty>
@@ -28,11 +37,19 @@
 </template>
 
 <script setup lang="ts">
-// import Giscus from '@giscus/vue'
+import Giscus from '@giscus/vue'
 import DocToc from '@/components/DocToc.vue'
+import { useDark } from '@/hooks/useDark'
+
+const { isDark } = useDark()
 
 const route = useRoute()
 const post = route.params.slug as Array<string>
-
 const path = post.join('/')
+
+const giscusTheme = ref<'light' | 'dark'>('light')
+
+watch(isDark, (val) => {
+  giscusTheme.value = val ? 'dark' : 'light'
+})
 </script>

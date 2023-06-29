@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import { useDark } from '@/hooks/useDark'
+
+const { checkTheme } = useDark()
+
 let isDark: boolean
 
 function toggleDark() {
   const root = document.documentElement
   isDark = root.classList.contains('dark')
+  checkTheme(!isDark)
   root.classList.remove(isDark ? 'dark' : '-')
   root.classList.add(isDark ? '-' : 'dark')
 }
@@ -54,5 +59,5 @@ function toogleTheme(event: MouseEvent) {
 </script>
 
 <template>
-  <div title="Toggle Color Scheme" class="dark:i-icon-park-outline-moon i-icon-park-outline-sun hover" @click="toogleTheme" />
+  <div title="Toggle Color Scheme" class="i-icon-park-outline-sun dark:i-icon-park-outline-moon hover" @click="toogleTheme" />
 </template>
