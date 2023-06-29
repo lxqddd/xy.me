@@ -33,7 +33,7 @@ npm init electron-app@latest my-new-app -- --template=webpack-typescript
 
 在项目中执行 `yarn start` 这个命令， `electron` 项目就会被启动，并且打开一个如下的窗口。
 
-<img class="self-pic" src="/assets/images/electron/electron_init.png" title="electron 初始化" alt="electron 初始化" />
+<img class="self-pic" src="/images/electron/electron_init.png" title="electron 初始化" alt="electron 初始化" />
 
 页面中展示的内容是项目中 `index.html` 中的内容。但是这样的话对于开发并不是很有好，因为我们在日常的开发中基本都是用的框架，比如说 `Vue` 或者是 `React`。
 
@@ -45,13 +45,13 @@ npm init electron-app@latest my-new-app -- --template=webpack-typescript
 
 在 electron-proj 下边执行 `yarn create vite render --template vue-ts`。这样就在 electron-proj 下边创建了一个基于 `vite` 的 `vue` 项目。把 `vue` 的项目启动起来
 
-<img class="self-pic" src="/assets/images/electron/vue_setup.png" title="electron 初始化" alt="electron 初始化" />
+<img class="self-pic" src="/images/electron/vue_setup.png" title="electron 初始化" alt="electron 初始化" />
 
 拿到项目启动之后的地址，将 main 项目 `index.ts` 中的 `mainWindow.loadUrl` 中的参数修改为 `http://127.0.0.1:5174/`。
 
 重启一下 main 项目，已经能够看到 `vue` 项目的页面已经渲染到 `electron` 中了。
 
-<img class="self-pic" src="/assets/images/electron/electron-vite.png" title="electron 初始化" alt="electron 初始化" />
+<img class="self-pic" src="/images/electron/electron-vite.png" title="electron 初始化" alt="electron 初始化" />
 
 现在已经通过加载 url 的形式展示页面了，那能不能直接加载 html 文件呢？既然前边已经说了可以，那必然就是可以的。
 
@@ -90,13 +90,13 @@ function createWindow() {
 
 我们在运行 electron 项目，发现打开的是一个空白页面，并且控制台有报错。
 
-<img class="self-pic" src="/assets/images/electron/electron-setup-error.png" title="electron 初始化" alt="electron 初始化" />
+<img class="self-pic" src="/images/electron/electron-setup-error.png" title="electron 初始化" alt="electron 初始化" />
 
 他提示我们加载本地文件失败，刷新一下页面，会看到更详细的报错信息。找不到的就是我们打包后的 vue 项目中的 css 和 js。
 
 我们找到打包后的 vue 项目，发现大包后的 html 在引用资源的时候使用的是一个绝对路径。这肯定是不行的。
 
-<img class="self-pic" src="/assets/images/electron/source-error.png" title="electron 初始化" alt="electron 初始化" />
+<img class="self-pic" src="/images/electron/source-error.png" title="electron 初始化" alt="electron 初始化" />
 
 这肯定是不行的，所以我们要修改一下 vite 的配置文件，把它改成相对路径。
 

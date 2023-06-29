@@ -13,7 +13,7 @@ tag: 'Electron'
 
 几乎在大多数情况下，我们安装 `electron` 的时候都会遇到一下问题：
 
-<img class="self-pic" src="/assets/images/electron/electron-install-fail.png" title="electron 安装失败" alt="electron 安装失败" />
+<img class="self-pic" src="/images/electron/electron-install-fail.png" title="electron 安装失败" alt="electron 安装失败" />
 
 ### 解决方案
 

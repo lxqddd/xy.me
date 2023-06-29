@@ -1,5 +1,5 @@
 <template>
-  <section class="prose relative slide-enter-content">
+  <section class="prose slide-enter-content relative">
     <ContentDoc :path="path">
       <template #default="{ doc }">
         <DocBack />
@@ -34,8 +34,5 @@ import DocToc from '@/components/DocToc.vue'
 const route = useRoute()
 const post = route.params.slug as Array<string>
 
-console.log(route.params)
 const path = post.join('/')
-
-console.log(path)
 </script>

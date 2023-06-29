@@ -133,7 +133,7 @@ interface Window {
 
 来看一下效果：
 
-![](/assets/images/electron/render-main.gif)
+![](/images/electron/render-main.gif)
 
 可以看到，当我们点击设置标题的按钮的时候，标题已经被修改，这说明渲染进程和主进程之间的通信已经完成了。
 
@@ -219,7 +219,7 @@ window.electronAPI.updateCounter((e, type) => {
 
 来看一下实现的效果~
 
-![](/assets/images/electron/main-render.gif)
+![](/images/electron/main-render.gif)
 
 这样就实现了主进程向渲染进程的通信。
 
@@ -292,7 +292,7 @@ const handOpenFile = async () => {
 ```
 
 来看一下实现之后的效果
-![](/assets/images/electron/invoke.gif)
+![](/images/electron/invoke.gif)
 
 我们可以看到控制台的打印信息，第一次，我们点击了取消按钮，在控制台中打印了 true；第二次我们选中了一个图片，控制台中打印出了图片的绝对路径。
 
