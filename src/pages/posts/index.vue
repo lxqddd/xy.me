@@ -5,7 +5,6 @@
       :key="item[0]"
     >
       <div
-
         slide-enter pointer-events-none relative h20 select-none
       >
         <span
@@ -59,14 +58,11 @@ onMounted(async () => {
     return 0
   })
 
-  console.log(sortContent)
-
   const years = Array.from(new Set(sortContent.map(item => item.year)))
 
   years.forEach((item) => {
     blogMap.value.push([item, sortContent.filter(content => item === content.year && content.path !== '/resume')])
   })
-  console.log(blogMap.value)
 })
 
 function jumpToDetail(data: IPost) {

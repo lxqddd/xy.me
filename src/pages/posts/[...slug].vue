@@ -17,7 +17,6 @@
           input-position="top"
           :theme="giscusTheme"
           lang="zh-CN"
-          loading="lazy"
         />
       </template>
 
