@@ -60,7 +60,7 @@ onMounted(async () => {
   const years = Array.from(new Set(sortContent.map(item => item.year)))
 
   years.forEach((item) => {
-    blogMap.value.push([item, sortContent.filter(content => item === content.year && content.path !== '/resume')])
+    blogMap.value.push([item, sortContent.filter(content => item === content.year && content.path !== '/resume' && !content.draft)])
   })
 })
 
