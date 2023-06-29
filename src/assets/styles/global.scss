@@ -63,7 +63,8 @@ html {
 
 pre,
 code {
-  font-family: 'Source Code Pro', ui-monospace, monospace;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace !important;
 }
 
 .link {
