@@ -13,6 +13,7 @@
     "@iconify-json/icon-park-outline": "^1.1.11",
     "@iconify-json/simple-icons": "^1.1.57",
     "@unocss/reset": "^0.53.1",
+    "aos": "^2.3.4",
     "date-fns": "^2.30.0",
     "dayjs": "^1.11.8",
     "vue": "^3.3.4"
@@ -20,8 +21,13 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",
     "@giscus/vue": "^2.2.8",
+    "@iconify-json/fluent": "^1.1.24",
     "@iconify-json/line-md": "^1.1.25",
     "@iconify-json/logos": "^1.1.33",
+    "@iconify-json/lucide": "^1.1.106",
+    "@iconify-json/ooui": "^1.1.24",
+    "@iconify-json/pajamas": "^1.1.27",
+    "@iconify-json/skill-icons": "^1.1.2",
     "@nuxt/content": "^2.7.0",
     "@nuxt/devtools": "latest",
     "@types/node": "^18",

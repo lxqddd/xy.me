@@ -2,7 +2,7 @@
 title: 二叉搜索树
 author: 向阳
 pubDate: 2021-09-07
-tag: 'Algorithm'
+tag: 'JavaScript'
 description: 二叉搜索树
 ---
 

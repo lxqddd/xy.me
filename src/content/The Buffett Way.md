@@ -2,7 +2,7 @@
 title: 巴菲特之道
 author: 向阳
 pubDate: 2022-11-30
-tag: 'Finance'
+tag: 'Essay'
 description: 巴菲特之道
 
 ---

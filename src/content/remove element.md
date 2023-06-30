@@ -2,7 +2,7 @@
 title: 移除元素
 pubDate: 2022-08-15
 author: 向阳
-tag: 'Algorithm'
+tag: 'JavaScript'
 description: 移除元素
 ---
 

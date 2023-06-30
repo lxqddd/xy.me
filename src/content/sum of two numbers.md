@@ -2,7 +2,7 @@
 title: 两数之和
 pubDate: 2022-08-08
 author: 向阳
-tag: 'Algorithm'
+tag: 'JavaScript'
 description: 两数之和
 ---
 

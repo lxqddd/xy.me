@@ -2,7 +2,7 @@
 title: 在排序数组中查找元素的第一个和最后一个位置
 pubDate: 2022-08-16
 author: 向阳
-tag: 'Algorithm'
+tag: 'JavaScript'
 description: 在排序数组中查找元素的第一个和最后一个位置
 ---
 

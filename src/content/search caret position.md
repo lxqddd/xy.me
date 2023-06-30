@@ -2,7 +2,7 @@
 title: 搜索插入位置
 pubDate: 2022-08-13
 author: 向阳
-tag: 'Algorithm'
+tag: 'JavaScript'
 description: 搜索插入位置
 ---
 

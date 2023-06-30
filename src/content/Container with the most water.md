@@ -2,7 +2,7 @@
 title: 盛水最多的容器
 pubDate: 2022-08-11
 author: 向阳
-tag: 'Algorithm'
+tag: 'JavaScript'
 description: 盛水最多的容器
 ---
 

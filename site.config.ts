@@ -31,5 +31,4 @@ export const navLinks = [
     path: '/',
     icon: 'i-icon-park-outline-grinning-face-with-open-mouth'
   }
-
 ]

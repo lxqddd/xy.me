@@ -3,6 +3,7 @@
   "rules": {
     "@typescript-eslint/comma-dangle": ["error", "never"],
     "vue/component-tags-order": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "new-cap": "off"
   }
 }

@@ -2,7 +2,7 @@
 title: 寻找两个正序数组的中位数
 pubDate: 2022-08-14
 author: 向阳
-tag: 'Algorithm'
+tag: 'JavaScript'
 description: 寻找两个正序数组的中位数
 ---
 

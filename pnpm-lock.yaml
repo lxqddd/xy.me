@@ -14,6 +14,9 @@ dependencies:
   '@unocss/reset':
     specifier: ^0.53.1
     version: 0.53.1
+  aos:
+    specifier: ^2.3.4
+    version: 2.3.4
   date-fns:
     specifier: ^2.30.0
     version: 2.30.0
@@ -31,12 +34,27 @@ devDependencies:
   '@giscus/vue':
     specifier: ^2.2.8
     version: 2.2.8(vue@3.3.4)
+  '@iconify-json/fluent':
+    specifier: ^1.1.24
+    version: 1.1.24
   '@iconify-json/line-md':
     specifier: ^1.1.25
     version: 1.1.25
   '@iconify-json/logos':
     specifier: ^1.1.33
     version: 1.1.33
+  '@iconify-json/lucide':
+    specifier: ^1.1.106
+    version: 1.1.106
+  '@iconify-json/ooui':
+    specifier: ^1.1.24
+    version: 1.1.24
+  '@iconify-json/pajamas':
+    specifier: ^1.1.27
+    version: 1.1.27
+  '@iconify-json/skill-icons':
+    specifier: ^1.1.2
+    version: 1.1.2
   '@nuxt/content':
     specifier: ^2.7.0
     version: 2.7.0
@@ -809,6 +827,12 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/fluent@1.1.24:
+    resolution: {integrity: sha512-fu5oHLpWVGZclldI4dL7v4dXtzPbAcLByHifuaX4VnZsPlUSKR1HO7mkA5GHbFDKSlD1FTY6BtwcalMwjVWJIQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/icon-park-outline@1.1.11:
     resolution: {integrity: sha512-hfevr1UUsw3d0STNgD6b0wUex6N99tE7URxN9bBbi+HJBzGOcN4gQt6GTKuapliAWoyZbnAqUtRdhIvgZ7epUA==}
     dependencies:
@@ -827,11 +851,35 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
+  /@iconify-json/lucide@1.1.106:
+    resolution: {integrity: sha512-6yfY+/u2GJz0eoMCXM2f6DYVWcBHtpmxLVGTzMhiDPQDQJa1UW5WoK/PEyav2eTjnpWkwT+rOec0uXb9QxYqXg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/ooui@1.1.24:
+    resolution: {integrity: sha512-Lql/eU8t1D5NmoiYnwtyvRi9Cy+VGtPfvy3FUZ2qvs7tNF91ovezLzdCOhJz9Ol7FhGr11ygzTtz0cu3v6K+gg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/pajamas@1.1.27:
+    resolution: {integrity: sha512-pM71mCDQzWq8Lc/ffsHdIHN+YgEiEazXCi9hts/Jdyku4q2NzDvfDBWf5miBOukoFfRDve0GRqjxBs20m2DDxQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/simple-icons@1.1.57:
     resolution: {integrity: sha512-s6vCsqkxkrbsmNkpspTvpN+e852FQ5QWpD0n3N8CfB75AZQ42n8gmwSrst99qH9yFwN3yQQVLwwJwPwIhxefsQ==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
+
+  /@iconify-json/skill-icons@1.1.2:
+    resolution: {integrity: sha512-USuBvlGoOryx7EPCNGqJ2PohbNHRJ4wTl7druaarQglhiYYOw8B6UoDZhWWu6+xIy4vieRpmyYO7HVd6dI30Dg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2535,6 +2583,14 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /aos@2.3.4:
+    resolution: {integrity: sha512-zh/ahtR2yME4I51z8IttIt4lC1Nw0ktsFtmeDzID1m9naJnWXhCoARaCgNOGXb5CLy3zm+wqmRAEgMYB5E2HUw==}
+    dependencies:
+      classlist-polyfill: 1.2.0
+      lodash.debounce: 4.0.8
+      lodash.throttle: 4.1.1
+    dev: false
+
   /aproba@2.0.0:
     resolution: {integrity: sha512-lYe4Gx7QT+MKGbDsA+Z+he/Wtef0BiwDOlK/XkBrdfsh9J/jPPXbX0tE9x9cl27Tmu5gg3QUbUrQYa/y+KOHPQ==}
     dev: true
@@ -3037,6 +3093,10 @@ packages:
   /citty@0.1.1:
     resolution: {integrity: sha512-fL/EEp9TyXlNkgYFQYNqtMJhnAk2tAq8lCST7O5LPn1NrzWPsOKE5wafR7J+8W87oxqolpxNli+w7khq5WP7tg==}
     dev: true
+
+  /classlist-polyfill@1.2.0:
+    resolution: {integrity: sha512-GzIjNdcEtH4ieA2S8NmrSxv7DfEV5fmixQeyTmqmRmRJPGpRBaSnA2a0VrCjyT8iW8JjEdMbKzDotAJf+ajgaQ==}
+    dev: false
 
   /clean-regexp@1.0.0:
     resolution: {integrity: sha512-GfisEZEJvzKrmGWkvfhgzcz/BllN1USeqD2V6tg14OAOgaCD2Z/PUEuxnAZ/nPvmaHRG7a8y77p1T/IRQ4D1Hw==}
@@ -5770,7 +5830,6 @@ packages:
 
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
-    dev: true
 
   /lodash.defaults@4.2.0:
     resolution: {integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==}
@@ -5803,6 +5862,10 @@ packages:
   /lodash.pick@4.4.0:
     resolution: {integrity: sha512-hXt6Ul/5yWjfklSGvLQl8vM//l3FtyHZeuelpzK6mm99pNvN9yTDruNZPEJZD1oWrqo+izBmB7oUfWgcCX7s4Q==}
     dev: true
+
+  /lodash.throttle@4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+    dev: false
 
   /lodash.union@4.6.0:
     resolution: {integrity: sha512-c4pB2CdGrGdjMKYLA+XiRDO7Y0PRQbm/Gzg8qMj+QH+pFVAoTp5sBpO0odL3FjoPCGjK96p6qsP+yQoiLoOBcw==}

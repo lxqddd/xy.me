@@ -30,6 +30,13 @@ export default defineNuxtConfig({
       }
     }
   },
+  plugins: [
+    {
+      src: '@/plugins/aos',
+      ssr: false,
+      mode: 'client'
+    }
+  ],
   devtools: { enabled: true },
   modules: [
     '@nuxt/content',
@@ -79,6 +86,7 @@ export default defineNuxtConfig({
     '@/assets/styles/global.scss',
     '@/assets/styles/theme.scss',
     '@/assets/styles/transition.scss',
-    '@/assets/styles/markdown.scss'
+    '@/assets/styles/markdown.scss',
+    'aos/dist/aos.css'
   ]
 })

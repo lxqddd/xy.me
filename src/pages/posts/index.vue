@@ -4,22 +4,30 @@
       v-for="item in blogMap"
       :key="item[0]"
     >
-      <divslide-enter pointer-events-none relative h20 select-none>
+      <div
+        data-aos="fade-in-left"
+        data-aos-delay="1000"
+        slide-enter pointer-events-none relative h20 select-none
+      >
         <span absolute left--3rem top--2rem text-8em font-bold color-transparent text-stroke-2 text-stroke-hex-aaa op10>{{ item[0] }}</span>
-      </divslide-enter>
+      </div>
       <div
         v-for="content in item[1]"
         :key="content.path"
-        class="slide-enter item mb-6 mt-2 block font-normal"
+        class="slide-enter item title-wrapper mb-6 mt-2 block font-normal"
         flex="~ col md:row gap-2 md:items-center"
-        @click="jumpToDetail(content)"
+        data-aos="fade-in-left"
+        data-aos-delay="1000"
       >
+        <span class="tag" :class="tagMap[content.tag]" />
         <div
           class="title text-lg leading-1.2em"
           flex="~ gap-2 wrap"
+          @click="jumpToDetail(content)"
         >
-          {{ content.title }}
+          <span>{{ content.title }}</span>
         </div>
+        <span class="pubDate">{{ dayjs(content.pubDate).format('MMM DD') }}</span>
       </div>
     </template>
   </div>
@@ -27,7 +35,27 @@
 
 <script setup lang='ts'>
 import dayjs from 'dayjs'
+
+// import { tagMap } from '../../../site.config'
 import type { IPost } from '@/types/index'
+
+const tagMap: {
+  [key: string]: string
+} = {
+  'TypeScript': 'i-skill-icons:typescript',
+  'Electron': 'i-skill-icons:electron',
+  'Vue': 'i-logos:vue',
+  'Nuxt': 'i-logos:nuxt-icon',
+  'React': 'i-logos:react',
+  'Tools': 'i-fluent:window-dev-tools-24-regular',
+  'Html': 'i-skill-icons:html',
+  'Css': 'i-skill-icons:css',
+  'JavaScript': 'i-skill-icons:javascript',
+  'Nest': 'i-logos:nestjs',
+  'Node': 'i-logos:nodejs-icon',
+  'Essay': 'i-ooui:article-ltr',
+  'CI/CD': 'i-pajamas:infrastructure-registry'
+}
 
 const blogMap = ref<Array<[string, IPost[]]>>([])
 
@@ -63,16 +91,33 @@ onMounted(async () => {
 function jumpToDetail(data: IPost) {
   useRouter().push(`/posts${data.path}`)
 }
+
+definePageMeta({
+  layout: 'aos-scroll' // 使用aos动画的页面
+})
 </script>
 
 <style lang="scss" scoped>
 .post {
-  .title {
-    opacity: 0.7;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
 
-    &:hover {
-      opacity: 1;
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    .title {
+      opacity: 0.7;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .tag {
+      opacity: 0.7;
+    }
+    .pubDate {
+      opacity: 0.4;
     }
   }
 }

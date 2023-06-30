@@ -2,7 +2,7 @@
 title: 删除数组中的重复项
 pubDate: 2022-08-10
 author: 向阳
-tag: 'Algorithm'
+tag: 'JavaScript'
 description: 删除数组中的重复项
 ---
 

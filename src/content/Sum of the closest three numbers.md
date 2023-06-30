@@ -2,7 +2,7 @@
 title: 最接近的三数之和
 pubDate: 2022-08-16
 author: 向阳
-tag: 'Algorithm'
+tag: 'JavaScript'
 description: 最接近的三数之和
 ---
 

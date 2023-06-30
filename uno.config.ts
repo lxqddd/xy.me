@@ -49,7 +49,12 @@ export default defineConfig({
         'icon-park-outline': () => import('@iconify-json/icon-park-outline/icons.json').then(i => i.default),
         'simple-icons': () => import('@iconify-json/simple-icons/icons.json').then(i => i.default),
         'line-md': () => import('@iconify-json/line-md/icons.json').then(i => i.default),
-        'logos': () => import('@iconify-json/logos/icons.json').then(i => i.default)
+        'logos': () => import('@iconify-json/logos/icons.json').then(i => i.default),
+        'skill-icons': () => import('@iconify-json/skill-icons/icons.json').then(i => i.default),
+        'lucide ': () => import('@iconify-json/lucide/icons.json').then(i => i.default),
+        'ooui': () => import('@iconify-json/ooui/icons.json').then(i => i.default),
+        'fluent': () => import('@iconify-json/fluent/icons.json').then(i => i.default),
+        'pajamas': () => import('@iconify-json/pajamas/icons.json').then(i => i.default)
       }
     })
   ],
