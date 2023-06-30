@@ -35,8 +35,6 @@
 
 <script setup lang='ts'>
 import dayjs from 'dayjs'
-
-// import { tagMap } from '../../../site.config'
 import type { IPost } from '@/types/index'
 
 const tagMap: {
