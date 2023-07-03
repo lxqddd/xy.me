@@ -87,6 +87,7 @@ export default defineNuxtConfig({
     '@/assets/styles/theme.scss',
     '@/assets/styles/transition.scss',
     '@/assets/styles/markdown.scss',
-    'aos/dist/aos.css'
+    'aos/dist/aos.css',
+    'vssue/dist/vssue.css'
   ]
 })
