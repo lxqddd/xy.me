@@ -13,11 +13,9 @@
     "@iconify-json/icon-park-outline": "^1.1.11",
     "@iconify-json/simple-icons": "^1.1.57",
     "@unocss/reset": "^0.53.1",
-    "@vssue/api-github-v3": "^1.4.7",
     "aos": "^2.3.4",
     "date-fns": "^2.30.0",
     "dayjs": "^1.11.8",
-    "vssue": "^1.4.8",
     "vue": "^3.3.4"
   },
   "devDependencies": {

@@ -1,6 +1,5 @@
 import { siteConfig } from './site.config'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: './src',
   app: {
@@ -87,7 +86,6 @@ export default defineNuxtConfig({
     '@/assets/styles/theme.scss',
     '@/assets/styles/transition.scss',
     '@/assets/styles/markdown.scss',
-    'aos/dist/aos.css',
-    'vssue/dist/vssue.css'
+    'aos/dist/aos.css'
   ]
 })

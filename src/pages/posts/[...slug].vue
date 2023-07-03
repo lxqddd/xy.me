@@ -15,6 +15,7 @@
           reactions-enabled="1"
           emit-metadata="1"
           input-position="top"
+          crossorigin="anonymous"
           :theme="giscusTheme"
           lang="zh-CN"
         />
