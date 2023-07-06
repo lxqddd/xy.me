@@ -75,7 +75,8 @@ export default defineNuxtConfig({
         'jsx',
         'html',
         'css',
-        'diff'
+        'diff',
+        'yaml'
       ]
 
     }
