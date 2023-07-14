@@ -1,7 +1,7 @@
 export const siteConfig = {
   author: '向阳',
   title: '向阳 - Blog',
-  description: 'My blog site.',
+  description: 'xy blog site.',
   lang: 'zh-CN'
 }
 
