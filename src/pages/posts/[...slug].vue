@@ -39,6 +39,7 @@
 <script setup lang="ts">
 import Giscus from '@giscus/vue'
 import DocToc from '@/components/DocToc.vue'
+import DocRender from '@/components/DocRender.vue'
 import { useDark } from '@/hooks/useDark'
 
 const { isDark } = useDark()
