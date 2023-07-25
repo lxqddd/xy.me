@@ -38,10 +38,10 @@
 
 <script setup lang="ts">
 import Giscus from '@giscus/vue'
+import { useDark } from '@vueuse/core'
 import DocToc from '@/components/DocToc.vue'
-import { useDark } from '@/hooks/useDark'
 
-const { isDark } = useDark()
+const isDark = useDark()
 
 const route = useRoute()
 const post = route.params.slug as Array<string>

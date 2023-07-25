@@ -1,6 +1,6 @@
 <template>
   <div class="nav-bar">
-    <div class="logo">
+    <div class="logo" @click="router.push('/')">
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" width="3.2rem" height="3.38rem">
         <g transform="scale(1.2)">
           <path
@@ -49,6 +49,7 @@ const router = useRouter()
     position: fixed;
     top: 40px;
     left: 40px;
+    cursor: pointer;
   }
 
   .nav {
