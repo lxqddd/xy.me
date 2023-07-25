@@ -40,6 +40,7 @@
 import Giscus from '@giscus/vue'
 import { useDark } from '@vueuse/core'
 import DocToc from '@/components/DocToc.vue'
+import DocRender from '@/components/DocRender.vue'
 
 const isDark = useDark()
 
