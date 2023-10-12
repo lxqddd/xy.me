@@ -49,8 +49,8 @@ const post = route.params.slug as Array<string>
 const path = post.join('/')
 
 const giscusTheme = ref<'light' | 'dark'>('light')
-
-watch(isDark, (val) => {
+giscusTheme.value = isDark.value ? 'dark' : 'light'
+watch(() => isDark.value, (val) => {
   giscusTheme.value = val ? 'dark' : 'light'
 })
 </script>
