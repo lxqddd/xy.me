@@ -13,7 +13,8 @@ export default defineNuxtConfig({
         { name: 'msapplication-TileColor', content: '#ffffff' },
         { charset: 'UTF-8' },
         { name: 'referrer', content: 'no-referrer' },
-        { 'http-equiv': 'X-UA-Compatible', 'content': 'IE=edge' }
+        { 'http-equiv': 'X-UA-Compatible', 'content': 'IE=edge' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' }
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }
