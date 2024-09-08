@@ -5,8 +5,6 @@
       :key="item[0]"
     >
       <div
-        data-aos="fade-in-left"
-        data-aos-delay="1000"
         slide-enter pointer-events-none relative h20 select-none
       >
         <span absolute left--3rem top--2rem text-8em font-bold color-transparent text-stroke-2 text-stroke-hex-aaa op10>{{ item[0] }}</span>
@@ -16,8 +14,6 @@
         :key="content.path"
         class="slide-enter item title-wrapper mb-6 mt-2 block font-normal"
         flex="~ col md:row gap-2 md:items-center"
-        data-aos="fade-in-left"
-        data-aos-delay="1000"
       >
         <span class="tag" :class="tagMap[content.tag]" />
         <div
@@ -89,10 +85,6 @@ onMounted(async () => {
 function jumpToDetail(data: IPost) {
   useRouter().push(`/posts${data.path}`)
 }
-
-definePageMeta({
-  layout: 'aos-scroll' // 使用aos动画的页面
-})
 </script>
 
 <style lang="scss" scoped>
