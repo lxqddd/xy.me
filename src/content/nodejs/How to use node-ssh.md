@@ -6,7 +6,7 @@ tag: 'JavaScript'
 description: 如何使用 node-ssh 实现自动化部署
 ---
 
-hello，大家好，我是向阳。自动化部署的的方式有很多，之前也写过两种，今天跟大家介绍一下如何在不依赖 Jenkins 、 gitLab CI/CD 和 github Action 的情况下，自己通过 node.js 实现自动化部署。
+自动化部署的的方式有很多，之前也写过两种，今天跟大家介绍一下如何在不依赖 Jenkins 、 gitLab CI/CD 和 github Action 的情况下，自己通过 node.js 实现自动化部署。
 
 ## node-ssh
 这里我们主要依赖一个叫 `node-ssh` 的工具，它是一个用于通过 `SSH` 协议远程执行命令、传输文件的 Node.js 库。它在 `ssh2` 的基础上提供了更高级别的接口，可以让我们在 Node.js 中使用 `SSH` 变得更简单。
