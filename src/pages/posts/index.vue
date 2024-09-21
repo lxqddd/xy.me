@@ -48,7 +48,8 @@ const tagMap: {
   'Nest': 'i-logos:nestjs',
   'Node': 'i-logos:nodejs-icon',
   'Essay': 'i-ooui:article-ltr',
-  'CI/CD': 'i-pajamas:infrastructure-registry'
+  'CI/CD': 'i-pajamas:infrastructure-registry',
+  'idea': 'i-line-md:lightbulb-twotone'
 }
 
 const blogMap = ref<Array<[string, IPost[]]>>([])
