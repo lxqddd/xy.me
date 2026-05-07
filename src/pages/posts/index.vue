@@ -33,6 +33,17 @@
 import dayjs from 'dayjs'
 import type { IPost } from '@/types/index'
 
+useSeoMeta({
+  title: '博客文章',
+  description: '向阳的技术博客文章列表，分享前端开发、Vue、Nuxt、TypeScript 等技术文章。',
+  ogTitle: '博客文章 - 向阳的博客',
+  ogDescription: '向阳的技术博客文章列表，分享前端开发、Vue、Nuxt、TypeScript 等技术文章。',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://xy.me/posts' }]
+})
+
 const tagMap: {
   [key: string]: string
 } = {
@@ -52,10 +63,8 @@ const tagMap: {
   'idea': 'i-line-md:lightbulb-twotone'
 }
 
-const blogMap = ref<Array<[string, IPost[]]>>([])
-
-onMounted(async () => {
-  const contentQuery = (await queryContent().find())
+const { data: blogMap } = await useAsyncData('posts', async () => {
+  const contentQuery = await queryContent().find()
 
   const res = contentQuery.map(item => ({
     author: item.author,
@@ -78,9 +87,9 @@ onMounted(async () => {
 
   const years = Array.from(new Set(sortContent.map(item => item.year)))
 
-  years.forEach((item) => {
-    blogMap.value.push([item, sortContent.filter(content => item === content.year && content.path !== '/resume' && !content.draft)])
-  })
+  return years.map(year =>
+    [year, sortContent.filter(content => content.year === year && content.path !== '/resume' && !content.draft)]
+  ) as Array<[string, IPost[]]>
 })
 
 function jumpToDetail(data: IPost) {

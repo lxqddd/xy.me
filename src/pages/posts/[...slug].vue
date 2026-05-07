@@ -48,6 +48,10 @@ const route = useRoute()
 const post = route.params.slug as Array<string>
 const path = post.join('/')
 
+useHead({
+  link: [{ rel: 'canonical', href: `https://xy.me/posts/${path}` }]
+})
+
 const giscusTheme = ref<'light' | 'dark'>('light')
 giscusTheme.value = isDark.value ? 'dark' : 'light'
 watch(() => isDark.value, (val) => {

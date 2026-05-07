@@ -5,6 +5,8 @@ export default defineNuxtConfig({
   app: {
     rootId: 'nuxt-root',
     head: {
+      title: siteConfig.title,
+      titleTemplate: '%s | 向阳的博客',
       meta: [
         { name: 'description', content: siteConfig.description },
         { name: 'author', content: siteConfig.author },
@@ -14,13 +16,16 @@ export default defineNuxtConfig({
         { charset: 'UTF-8' },
         { name: 'referrer', content: 'no-referrer' },
         { 'http-equiv': 'X-UA-Compatible', 'content': 'IE=edge' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' }
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
+        { property: 'og:site_name', content: siteConfig.title },
+        { property: 'og:image', content: '/logo.svg' },
+        { name: 'twitter:card', content: 'summary_large_image' },
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }
       ],
       noscript: [
-        { children: 'JavaScript is required' }
+        { innerHTML: 'JavaScript is required' }
       ],
       htmlAttrs: {
         lang: siteConfig.lang
@@ -35,7 +40,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@unocss/nuxt',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap'
   ],
   content: {
     sources: {
@@ -82,5 +89,12 @@ export default defineNuxtConfig({
     '@/assets/styles/theme.scss',
     '@/assets/styles/transition.scss',
     '@/assets/styles/markdown.scss'
-  ]
+  ],
+  site: {
+    url: 'https://xy.me',
+    name: siteConfig.title
+  },
+  sitemap: {
+    autoLastmod: true
+  }
 })

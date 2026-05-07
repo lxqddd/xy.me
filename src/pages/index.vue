@@ -10,7 +10,16 @@
 </template>
 
 <script setup lang='ts'>
+useSeoMeta({
+  title: '向阳 - 关于我',
+  description: '向阳的个人主页，前端开发工程师的技术博客与简历。',
+  ogTitle: '向阳 - 关于我',
+  ogDescription: '向阳的个人主页，前端开发工程师的技术博客与简历。',
+})
 
+useHead({
+  link: [{ rel: 'canonical', href: 'https://xy.me/' }]
+})
 </script>
 
 <style lang="scss" scoped>

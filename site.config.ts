@@ -1,7 +1,7 @@
 export const siteConfig = {
   author: '向阳',
   title: '向阳 - Blog',
-  description: 'xy blog site.',
+  description: '向阳的个人技术博客，分享前端开发、Vue、Nuxt、TypeScript 等技术文章与心得。',
   lang: 'zh-CN'
 }
 
